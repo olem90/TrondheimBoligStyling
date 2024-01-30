@@ -1,8 +1,8 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { NavStyle, LogoStyle } from "./Nav.style";
 import logo from "../../images/tbs-logo.png"
 
-export const Nav = ({ scrollToAboutUs, scrollToContact }) => {
+export const Nav = ({ scrollToAboutUs, scrollToContact, scrollToGallery }) => {
     return (
         <NavStyle>
             <LogoStyle>
@@ -10,8 +10,9 @@ export const Nav = ({ scrollToAboutUs, scrollToContact }) => {
             </LogoStyle>
             <div className="navLinks">
                 <NavLink onClick={scrollToAboutUs} className="om-oss-link">Om Oss</NavLink>
-                <NavLink onClick={scrollToContact} className="kontakt-oss-link">Kontakt Oss</NavLink>  
+                <NavLink onClick={scrollToContact} className="kontakt-oss-link">Kontakt Oss</NavLink>   
+                <NavLink onClick={scrollToGallery} className="gallery-link">Galleri</NavLink>    
             </div>
-        </NavStyle>
-    )
+        </NavStyle> 
+    ) 
 }

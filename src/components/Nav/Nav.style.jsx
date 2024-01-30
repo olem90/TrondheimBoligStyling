@@ -15,16 +15,19 @@ export const NavStyle = styled.nav`
   }  
 
   .navLinks {
-    margin-left: auto; 
+    margin-left: auto;   
     margin-block: auto;  
-  }
+  } 
   .om-oss-link {
-   margin-right: 35px; 
+   margin-right: 65px; 
   }
 
   .kontakt-oss-link {
-    margin-right: 225px;
-    margin-left: 45px; 
+    margin-right: 65px;  
+  }
+
+  .gallery-link {  
+    margin-right: 145px;   
   }
 ` 
 

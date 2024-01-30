@@ -8,6 +8,7 @@ import { Gallery } from "../Gallery/Gallery";
 export const Home = () => {
     const aboutUsRef = useRef(null);
     const contactRef = useRef(null);
+    const galleryRef = useRef(null);
 
 
     const scrollToAboutUs = () => {
@@ -15,19 +16,24 @@ export const Home = () => {
     };
 
     const scrollToContact = () => {
-        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' }); 
+    };
+
+    const scrollToGallery = () => {
+        galleryRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
         <HomeStyle>
             <Layout 
+            scrollToGallery={scrollToGallery} 
             scrollToAboutUs={scrollToAboutUs}
             scrollToContact={scrollToContact}
             >
-                <Gallery /> 
+                <Gallery ref={galleryRef} />  
                 <AboutUs ref={aboutUsRef} />
                 <Contact ref={contactRef} /> 
             </Layout>
-        </HomeStyle>
-    )
+        </HomeStyle> 
+    ) 
 }
