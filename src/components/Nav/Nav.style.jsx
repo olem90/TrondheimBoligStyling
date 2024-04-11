@@ -10,14 +10,19 @@ export const NavStyle = styled.nav`
   background: #000; 
 
   a {
-    color: gold; 
-    font-size: 20px;
+    color: #fff;  
+    font-size: 20px; 
   }  
 
   .navLinks {
     margin-left: auto;   
     margin-block: auto;  
-  } 
+  }  
+
+  .priser-link {
+    margin-right: 65px; 
+  }
+
   .om-oss-link {
    margin-right: 65px; 
   }

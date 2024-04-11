@@ -1,4 +1,4 @@
-import { ContactStyle, ContactFormStyle, ContactStyleWrapper } from "./Contact.style";
+import { ContactStyle, ContactFormStyle, ContactFormStyle2, ContactStyleWrapper } from "./Contact.style";
 import React, { forwardRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -125,13 +125,14 @@ export const Contact = forwardRef((props, ref) => {
     return (
         <ContactStyleWrapper ref={ref}>
             <ContactStyle>
-                <h2>Kontakt Oss</h2>
+                
                 <ContactFormStyle>
-                    <label htmlFor="name">Navn</label>
+                    <h2>Send Oss En Melding</h2>
+                    <label htmlFor="name">Navn</label> 
                     <input id="name" 
                     value={name}
                     placeholder="Ditt navn.."
-                    onChange={onNameChange}
+                    onChange={onNameChange} 
                     required
                     />
                     <span>{nameError}</span>
@@ -162,27 +163,28 @@ export const Contact = forwardRef((props, ref) => {
                     required
                     />
                     <span>{bodyError}</span> 
-                    {successMessge && <span>{successMessge}</span>}
+                    {successMessge && <span>{successMessge}</span>}  
                     {errorMessage && <span>{errorMessage}</span>}
 
                     <button type="submit" onClick={onFormSubmit} disabled={isLoading}>
-                        {isLoading ? 'Sender...' : 'Send'} 
+                        {isLoading ? 'Sender...' : 'Send'}  
                     </button>
-                </ContactFormStyle>
-                <p>Du finner oss også på sosiale medier, som du ser under</p>
-                <div>
+                </ContactFormStyle> 
+                <ContactFormStyle2>
+                    <h2>Kontakt Oss</h2> 
                     <div>
-                        <FontAwesomeIcon className="insta-icon" icon={faInstagram} />
-                    </div>
+                        <div>
+                            <span>Phone: </span>
 
-                    <div>
-                        
-                    </div>
+                        </div>
+                        <div>
 
-                    <div>
-                        
+                        </div>
+                        <div>
+
+                        </div>
                     </div>
-                </div>
+                </ContactFormStyle2>     
             </ContactStyle>
         </ContactStyleWrapper>
     )

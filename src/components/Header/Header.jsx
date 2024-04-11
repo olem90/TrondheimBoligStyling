@@ -1,16 +1,32 @@
+import React, { useState, useEffect } from "react";
 import { HeaderStyle } from "./Header.style";
 import { Nav } from "../Nav/Nav";
 import { HeaderText } from "../HeaderText/HeaderText";
+import bolig7 from "../../images/bolig-7.jpg";
+import bolig8 from "../../images/bolig-8.jpg";
+import bolig9 from "../../images/bolig-9.jpg";
 
-export const Header = ({ scrollToAboutUs, scrollToContact, scrollToGallery }) => {
+export const Header = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollToPriser}) => {
+    const images = [bolig7, bolig8, bolig9];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentImageIndex((currentIndex) => (currentIndex + 1) % images.length);
+        }, 8000); 
+ 
+        return () => clearInterval(intervalId);  
+    }, []);
+
     return (
-        <HeaderStyle>
+        <HeaderStyle bgimage={images[currentImageIndex]}> 
             <Nav 
+            scrollToPriser={scrollToPriser}
             scrollToContact={scrollToContact}
             scrollToAboutUs={scrollToAboutUs} 
-            scrollToGallery={scrollToGallery}
+            scrollToGallery={scrollToGallery} 
             />
-            <HeaderText />
+            <HeaderText currentImageIndex={currentImageIndex} />
         </HeaderStyle>
     )
 }
