@@ -10,7 +10,7 @@ export const NavStyle = styled.nav`
   background: #000; 
 
   a {
-    color: #fff;  
+    color: #E3CBA8;  
     font-size: 20px; 
   }  
 

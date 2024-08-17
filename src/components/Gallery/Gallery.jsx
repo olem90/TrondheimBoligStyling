@@ -19,7 +19,8 @@ export const Gallery = forwardRef((props, ref) => {
     const [showFullGallery, setShowFullGallery] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [imagesPerPage] = useState(9); 
+    const [imagesPerPage] = useState(9);
+
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const images = [bolig1, bolig2, bolig3, bolig4, bolig5, bolig6, bolig7, bolig8, bolig9, bolig10, bolig11]; 

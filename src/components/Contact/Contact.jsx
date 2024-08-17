@@ -1,7 +1,8 @@
-import { ContactStyle, ContactFormStyle, ContactFormStyle2, ContactStyleWrapper } from "./Contact.style";
+import { ContactStyle, ContactFormStyle, ContactStyleWrapper } from "./Contact.style";
 import React, { forwardRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export const Contact = forwardRef((props, ref) => {
     const [name, setname] = useState('');
@@ -77,7 +78,7 @@ export const Contact = forwardRef((props, ref) => {
         
             try {
                 setIsError(false);
-                setIsLoading(true); // Start loading
+                setIsLoading(true);
                 const payload = { name, subject, email, body }; 
                 const backendUrl = 'http://localhost:3001/send'; 
     
@@ -125,7 +126,7 @@ export const Contact = forwardRef((props, ref) => {
     return (
         <ContactStyleWrapper ref={ref}>
             <ContactStyle>
-                
+                <h1>Kontakt Oss</h1>
                 <ContactFormStyle>
                     <h2>Send Oss En Melding</h2>
                     <label htmlFor="name">Navn</label> 
@@ -170,21 +171,25 @@ export const Contact = forwardRef((props, ref) => {
                         {isLoading ? 'Sender...' : 'Send'}  
                     </button>
                 </ContactFormStyle> 
-                <ContactFormStyle2>
-                    <h2>Kontakt Oss</h2> 
+                <div className="kontakt">
                     <div>
-                        <div>
-                            <span>Phone: </span>
+                      <div>
+                        <p>
+                          <a>
+                            <FontAwesomeIcon icon={faPhone} /> 93271886
+                          </a>
+                        </p>
+                      </div>
 
-                        </div>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
+                      <div>
+                        <p>
+                          <a>
+                            <FontAwesomeIcon icon={faInstagram} /> Trondheimboligstyling
+                          </a>  
+                        </p>
+                      </div>
                     </div>
-                </ContactFormStyle2>     
+                </div>
             </ContactStyle>
         </ContactStyleWrapper>
     )

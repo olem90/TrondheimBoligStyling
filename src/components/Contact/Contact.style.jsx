@@ -1,25 +1,53 @@
 import styled from "styled-components";
 
 export const ContactStyle = styled.div`
-  width:800px;
+  
   margin: auto;
-  display: flex; 
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+  }
   
   h2 {
-    color: #fff;
+    color: #000;
+    text-align: center;
+  }
+
+  .kontakt {
+    display: flex;
+    flex-direction: column;
+    width: inherit; 
+    padding: 20px 0;
+    margin-top: 30px;
+    
+    div {
+      margin-inline: auto;
+      width: 50%;
+      margin-top: 10px;
+      
+      a {
+        font-size: 25px;
+        white-space: nowrap;  
+        color: #2C3E50;
+ 
+        &:hover {
+          color: #1A242F;
+          cursor: pointer; 
+        }
+      }
   }
 ` 
 
 export const ContactFormStyle = styled.form`  
   box-sizing: border-box;
-  width: 500px;
+  width: 600px;
   display: flex; 
   flex-direction: column;
   border: 3px solid #000;  
   padding: 20px;
   margin: auto;
-  color: #fff;
-  background: linear-gradient(to right, #6a11cb, #6a11cb,  #2579fc);   
   
   button {
     background: #000; 
@@ -30,33 +58,41 @@ export const ContactFormStyle = styled.form`
   } 
  
   input {
-    padding: 3px;
-    background: inherit;
-    border: 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    background: #fff; 
+    border-radius: 3px; 
+    height: 20px;
+    border: 1px solid #000;
   } 
 
-  textarea {
-    padding: 5px;
-    background: inherit;  
-    border: 0; 
+  label {
+    margin-block: 5px;
   }
-`
 
-export const ContactFormStyle2 = styled(ContactFormStyle)` 
-  color: #000; 
-  height: 100%; 
-  background: #fff;
-  
-  h2 {  
-    color: #000;
+  textarea {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #D2B48C;
+    min-height: 100px;
+    border-radius: 4px;
+    color: #333333;
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px; 
+    margin-bottom: 20px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+
+  textarea:focus {
+    border-color: #4B2E1F;
   }
 `
 
 export const ContactStyleWrapper = styled.section`
   box-sizing: border-box; 
-  background: #F8F8F8; 
+  background: #F3E5C8; 
   height: 100vh;   
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 `

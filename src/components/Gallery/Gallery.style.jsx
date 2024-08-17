@@ -9,8 +9,7 @@ export const GalleryStyle = styled.div`
   margin: auto;  
   position: relative;  
   height: 90%;
-  border: 2px solid blue; 
-
+  
   .h2-front {
     text-align: center;  
     font-size: 38px;
@@ -23,6 +22,7 @@ export const GalleryStyle = styled.div`
   .gallery-page {  
     box-sizing: border-box; 
     width: 100%;
+    height: 100%;
     padding: 15px;
     transform-style: preserve-3d;   
     transition: transform 0.8s;  
@@ -43,8 +43,7 @@ export const GalleryStyle = styled.div`
       justify-content: center; 
       align-items: center;   
       visibility: hidden; 
-      flex-direction: column;  
-      border: 2px solid gold; 
+      flex-direction: column;
  
       .pagination-buttons {  
         box-sizing: border-box;  
@@ -85,12 +84,10 @@ export const GalleryStyle = styled.div`
  
       .images-container {
         box-sizing: border-box;  
-        width: 100%; 
-        min-height: 100%;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);  
         gap: 25px 80px; 
-        border: 2px solid red;    
         
         img { 
           max-height: 210px;  
@@ -120,10 +117,8 @@ export const GalleryStyle = styled.div`
       }
     }
 
-    .flipped .front {
-      opacity: 0; 
-    } 
-  }
+    
+  } 
    
   .gallery-front-img { 
     min-width: 100%;    
@@ -131,38 +126,26 @@ export const GalleryStyle = styled.div`
     height: 600px;       
     margin-inline: auto;  
     background-color: rgba(255, 255, 255, 0.4);     
-    transition: opacity 0.97s ease; 
     opacity: 1; 
- 
-    &:hover, &.link-hovered { 
-      opacity: 0.75;  
-    } 
   }  
   
-  .galleri-link {  
-    width: auto;   
-    border: none;
-    height: 20px;
-    padding: 7px; 
-    color: #000;
-    opacity: 0;   
-    transition: opacity 1.1s ease, transform 1.1s ease;     
-    position: absolute;  
-    bottom: 7px;         
-    left: 50%;     
-    top: 60%; 
-    transform: translate(-20%, -50%); 
-    font-size: 44px ;    
-    text-decoration: underline;  
-    transform: translateX(-50%) scale(0.9);  
-    font-family: PlayfairDisplay, sans serif;  
-  }   
-  
-  &:hover .galleri-link { 
-    opacity: 1; 
-    transform: translate(-50%, -50%) scale(1); 
+  .galleri-link {
+    border: 2px solid transparent; 
+    padding: 5px 15px;  
+    color: #4B2E1F;  
+    font-weight: bold;
+    border-radius: 12px;   
+    background: rgba(240, 240, 240, 0.8);    
+    
+    font-size: 44px;
+    font-family: PlayfairDisplay, sans serif;
+    transition: border 0.3s ease;
+
+    &:hover { 
     cursor: pointer;
+    border: 2px solid #4B2E1F;
   } 
+  }   
 `      
 
 export const ClickableImage = styled.button`
@@ -188,7 +171,7 @@ export const ModalContent = styled.div`
   display: flex;    
   flex-direction: column;
   background-color: #fff;
-  border: 7px solid silver;     
+  border: 7px solid silver; 
   border-radius: 7px;  
   max-width: 760px;  
   max-height: 610px;   
@@ -240,7 +223,7 @@ export const ModalContent = styled.div`
  
   .thumb-img {
     max-width: 100px;
-    min-width: 100px;     
+    min-width: 100px;
     max-height: 80px;
     min-height: 80px;
   }
@@ -252,25 +235,25 @@ export const ModalContent = styled.div`
 `; 
 
 export const ModalBackdrop = styled.div`
-  position: fixed;  
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; 
-  transform: translateY(-12%); 
-  background-color: rgba(0, 0, 0, 0.5);    
+  bottom: 0;
+  transform: translateY(-12%);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  min-height: 80vh;   
+  min-height: 80vh;
   justify-content: center;
   align-items: center;
   z-index: 10;
 `;
  
 export const GalleryStyleWrapper = styled.section` 
-  background: #F8F8F8;
-  height: 100vh;  
+  height: 100vh;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  border: 2px solid red; 
+  background: #E3CBA8;
+  background: #F0E1D1;
 `  
