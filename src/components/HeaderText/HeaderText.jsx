@@ -9,7 +9,7 @@ export const HeaderText = ({ currentImageIndex }) => {
             textContent = (
                 <>
                     <HeaderTextStyle>
-                        Avslør Ditt Hjems Skjønnhet.
+                        Avslør Ditt Hjems Skjønnhet
                     </HeaderTextStyle>
                 </> 
             );
@@ -18,7 +18,7 @@ export const HeaderText = ({ currentImageIndex }) => {
             textContent = (
                 <>
                     <HeaderTextStyle2>
-                        Gjør Ditt Hjem Uimotståelig.
+                        Gjør Ditt Hjem Uimotståelig
                     </HeaderTextStyle2>
                 </> 
             );
@@ -27,7 +27,7 @@ export const HeaderText = ({ currentImageIndex }) => {
             textContent = (
                 <>
                 <HeaderTextStyle>
-                    Fra bolig til drømmested.
+                    Fra bolig til drømmested
                 </HeaderTextStyle>
             </> 
             );

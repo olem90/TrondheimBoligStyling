@@ -10,8 +10,14 @@ export const NavStyle = styled.nav`
   background: #000; 
 
   a {
-    color: #E3CBA8;  
-    font-size: 20px; 
+    color: #C0A16B;  
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    transition: .3s ease;
+
+    &:hover {
+      color: #D4AF37; 
+    }
   }  
 
   .navLinks {

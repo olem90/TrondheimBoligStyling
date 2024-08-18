@@ -12,7 +12,7 @@ export const HeaderStyle = styled.header`
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(${props => props.bgimage});
+    background-image: url(${props => props.$bgimage});
     background-size: cover; 
     background-position: center;
     filter: brightness(70%); 

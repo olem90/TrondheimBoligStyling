@@ -6,7 +6,7 @@ export const Nav = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollT
     return (
         <NavStyle>
             <LogoStyle>
-                <img className="logo" src={logo}></img> 
+                <img className="logo" src={logo} alt="Trondheim Boligstyling-logo med en stilisert gull 'T' inni en sirkulær ramme, med firmanavnet 'Trondheim Boligstyling' skrevet under i elegante, gullfargede store bokstaver."></img> 
             </LogoStyle>
             <div className="navLinks">
                 <NavLink onClick={scrollToPriser} className="priser-link">Priser</NavLink>

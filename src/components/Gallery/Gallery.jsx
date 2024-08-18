@@ -29,6 +29,7 @@ export const Gallery = forwardRef((props, ref) => {
     const indexOfFirstImage = indexOfLastImage - imagesPerPage;
     const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
     const modalContentRef = useRef(null); 
+    const timeoutIdRef = useRef(null);
 
     const openModalWithImage = (index) => {
         setSelectedImage(index); 
@@ -55,6 +56,35 @@ export const Gallery = forwardRef((props, ref) => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [closeModal]);
+
+    useEffect(() => {
+        const hideButtons = () => {
+            document.querySelectorAll('.prev, .next').forEach(button => {
+                button.style.opacity = '0';
+            });
+        };
+
+        const showButtons = () => {
+            document.querySelectorAll('.prev, .next').forEach(button => {
+                button.style.opacity = '1';
+            });
+
+            clearTimeout(timeoutIdRef.current);
+            timeoutIdRef.current = setTimeout(hideButtons, 4000); // 4 seconds to hide
+        };
+
+        // Initially hide the buttons after 4 seconds
+        timeoutIdRef.current = setTimeout(hideButtons, 4000);
+
+        // Event listener for mouse movement
+        document.addEventListener('mousemove', showButtons);
+
+        // Cleanup event listener and timeout on unmount
+        return () => {
+            clearTimeout(timeoutIdRef.current);
+            document.removeEventListener('mousemove', showButtons);
+        };
+    }, []);
 
     const navigateImage = (direction) => {
         setSelectedImage((currentIndex) => {
@@ -126,7 +156,7 @@ export const Gallery = forwardRef((props, ref) => {
                           onMouseEnter={() => setLinkHovered(true)}
                           onMouseLeave={() => setLinkHovered(false)}
                           >
-                            Se Galleri
+                             - Se Galleriet -
                         </a>
                     </div>
 

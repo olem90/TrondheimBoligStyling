@@ -12,11 +12,12 @@ export const GalleryStyle = styled.div`
   
   .h2-front {
     text-align: center;  
-    font-size: 38px;
+    font-size: 54px;
     color: #000;
     font-family: PlayfairDisplay, sans serif; 
-    margin: 0;  
-    padding: 0; 
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: bold; 
+    margin: 0 0 30px 0; 
   }
  
   .gallery-page {  
@@ -30,7 +31,7 @@ export const GalleryStyle = styled.div`
     perspective: 1000px;    
     margin: auto;
 
-    .back { 
+    .back {
       box-sizing: border-box; 
       position: absolute;
       top: 0;
@@ -48,9 +49,9 @@ export const GalleryStyle = styled.div`
       .pagination-buttons {  
         box-sizing: border-box;  
         display: flex; 
-        margin-top: 70px; 
+        margin-top: 50px; 
         padding: 5p;
-        width: 100%;    
+        width: 88%;
         
         button {
           border: none;
@@ -58,15 +59,16 @@ export const GalleryStyle = styled.div`
         }
            
         .lukk-galleri {    
-          display: flex;  
+          display: flex;
+          margin-left: 240px;
           margin-right: auto;    
           justify-content: center;
           align-items: center;    
           width: 100px;   
           padding: 1px; 
-          color: #000; 
-          margin-left: 0;     
-          border: 2px solid #000;
+          color: #000;
+          text-decoration: underline;
+          margin-left: 0;
         }  
  
         .current-page {
@@ -76,15 +78,15 @@ export const GalleryStyle = styled.div`
       } 
 
       .gallery-h2 { 
-        font-size: 38px;
+        font-size: 54px;
         color: #000;
-        font-family: PlayfairDisplay, sans serif;
-        margin: 0;
+        font-family: 'Cormorant Garamond', serif; 
+        margin: 0 0 30px 0;
       }
  
       .images-container {
         box-sizing: border-box;  
-        width: 100%;
+        width: 88%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);  
         gap: 25px 80px; 
@@ -130,20 +132,22 @@ export const GalleryStyle = styled.div`
   }  
   
   .galleri-link {
-    border: 2px solid transparent; 
-    padding: 5px 15px;  
-    color: #4B2E1F;  
+    border: 2px solid transparent;
+    padding: 7px 18px; 
+    color: #8B5E3C;
     font-weight: bold;
-    border-radius: 12px;   
-    background: rgba(240, 240, 240, 0.8);    
-    
+    display: flex;
+    max-width: fit-content; 
+    border-radius: 5px;
+    margin-inline: auto;
     font-size: 44px;
-    font-family: PlayfairDisplay, sans serif;
-    transition: border 0.3s ease;
+    font-family: Lora, PlayfairDisplay, sans serif;
+    margin-top: 35px;
+    transition: border 0.3s ease; 
 
     &:hover { 
-    cursor: pointer;
-    border: 2px solid #4B2E1F;
+      cursor: pointer;
+      border: 2px solid #8B5E3C; 
   } 
   }   
 `      
@@ -166,7 +170,7 @@ export const CloseButton = styled.span`
  
 export const ModalContent = styled.div`  
   box-sizing: border-box;  
-  padding: 15px; 
+  padding: 15px;  
   position: relative; 
   display: flex;    
   flex-direction: column;
@@ -185,13 +189,18 @@ export const ModalContent = styled.div`
     transform: translateY(-50%);
     border: none;
     cursor: pointer;
-    font-size: 74px;  
+    font-size: 66px;  
     display: flex;  
     justify-content: center;  
     align-items: center;   
     max-width: 60px; 
-    background-color: rgba(255, 255, 255, 0.5);  
+    background: rgba(255, 255, 255, 0.5);   
     padding: 20px;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.8); 
+    }
   }      
   
   .next { 
@@ -228,10 +237,10 @@ export const ModalContent = styled.div`
     min-height: 80px;
   }
 
-  .thumb-img.active {  
+  .thumb-img.active {
     border: 2px solid #000;
   }
-  }  
+  }
 `; 
 
 export const ModalBackdrop = styled.div`
@@ -257,3 +266,5 @@ export const GalleryStyleWrapper = styled.section`
   background: #E3CBA8;
   background: #F0E1D1;
 `  
+
+

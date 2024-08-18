@@ -11,6 +11,24 @@ export const PriserContainer = styled.div`
     font-size: 16px;
   }
 
+  .frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: white;
+    box-shadow: 
+        0 0 0 4px #d4af37, /* Inner shadow */
+        0 0 0 8px #b8860b, /* Middle shadow */
+        0 0 25px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 3px; 
+    width: fit-content; 
+    margin: auto;
+    margin-top: 90px;
+    text-align: center;
+    
+}
+
   .buttons-container {
     margin-top: 60px;
     display: flex;
@@ -44,7 +62,7 @@ export const PriserContainer = styled.div`
   }
 
   h3 {
-    margin-top: 85px;
+    margin-top: 35px;
   }
 
   p{
@@ -58,3 +76,4 @@ export const PriserWrapper = styled.div`
   border: 1px solid transparent;
   height:100dvh; 
 `   
+

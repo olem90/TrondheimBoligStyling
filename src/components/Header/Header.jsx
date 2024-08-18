@@ -7,7 +7,11 @@ import bolig8 from "../../images/bolig-8.jpg";
 import bolig9 from "../../images/bolig-9.jpg";
 
 export const Header = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollToPriser}) => {
-    const images = [bolig7, bolig8, bolig9];
+    const images = [
+        {src: bolig7, alt: "Vakkert designet stue med moderne møbler."}, 
+        {src: bolig8, alt: "Romslig kjøkkenområde med stilige innredninger."}, 
+        {src: bolig9, alt:"Elegant soverom med en beroligende atmosfære."}];
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -19,7 +23,7 @@ export const Header = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scro
     }, []);
 
     return (
-        <HeaderStyle bgimage={images[currentImageIndex]}> 
+        <HeaderStyle $bgimage={images[currentImageIndex].src}> 
             <Nav 
             scrollToPriser={scrollToPriser}
             scrollToContact={scrollToContact}
