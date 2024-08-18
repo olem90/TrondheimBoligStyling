@@ -14,7 +14,6 @@ export const GalleryStyle = styled.div`
     text-align: center;  
     font-size: 54px;
     color: #000;
-    font-family: PlayfairDisplay, sans serif; 
     font-family: 'Cormorant Garamond', serif; 
     font-weight: bold; 
     margin: 0 0 30px 0; 
@@ -263,7 +262,6 @@ export const GalleryStyleWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #E3CBA8;
   background: #F0E1D1;
 `  
 

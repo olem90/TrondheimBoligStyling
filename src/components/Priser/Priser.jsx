@@ -31,8 +31,7 @@ export const Priser = forwardRef((props, ref) => {
             {activeSection === 'delstyling' && <Delstyling />}
             {activeSection === 'helstyling' && <Helstyling />}
           </div>
-        )}
-                
+        )}       
             </PriserContainer>
         </PriserWrapper>
     )

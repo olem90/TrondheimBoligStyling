@@ -39,17 +39,23 @@ export const PriserContainer = styled.div`
       border: 1px solid #000;
       font-size: 20px;
       border-radius: 5px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: bold; 
     }
   }
 
   h2 {
    text-align: center;
-   font-size: 32px;
+   font-size: 45px;
    margin-top: 90px;
+   font-family: 'Cormorant Garamond', serif; 
   }
 
-  p, h3 {
+  h3 {
     padding-inline: 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; 
+    margin-top: 20px; 
   }
 
   .price {
@@ -61,12 +67,14 @@ export const PriserContainer = styled.div`
     margin-inline: auto;
   }
 
-  h3 {
-    margin-top: 35px;
-  }
-
   p{
     font-size: 18px;
+    font-family: 'Roboto', serif;
+  }
+
+  .bullet {
+    font-size: 20px;
+    font-weight: bold;
   }
 `  
 

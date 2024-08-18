@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ContactStyle = styled.div`
-  
   margin: auto;
   display: flex;
   flex-direction: column;
 
   h1 {
     text-align: center;
-    color: #2C3E50;
+    color: #E0F7FA;
     font-family: 'Cormorant Garamond', serif;
     font-size: 64px;
     font-weight: bold; 
@@ -17,7 +16,7 @@ export const ContactStyle = styled.div`
   h2 {
     color: #000;
     text-align: center;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Dancing Script', serif;
     font-weight: bold;
     font-size: 34px;
   }
@@ -25,19 +24,18 @@ export const ContactStyle = styled.div`
   .kontakt {
     display: flex;
     flex-direction: column;
-    width: inherit; 
-    padding: 20px 0;
-    margin-top: 30px;
+    width: inherit;
     
     div {
       margin-inline: auto;
-      width: 50%;
+      width: 100%;
+      max-height: fit-content;
       margin-top: 10px;
       
       a {
         font-size: 25px;
         white-space: nowrap;  
-        color: #2C3E50;
+        color: #E0F7FA;
  
         &:hover {
           color: #1A242F;
@@ -52,18 +50,32 @@ export const ContactFormStyle = styled.form`
   width: 600px;
   display: flex; 
   flex-direction: column;
-  border: 3px solid #6E4B3A;  
+  border: 2px solid #6E4B3A;  
   padding: 20px;
   margin: auto;
   background: #F0EDE5;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(143, 124, 107, 0.1);
   
   button {
-    background-color: #3E2723;
-    color: #fff;  
+    background-color: transparent;
+    color: #8F7C6B;  
     margin-top: 12px; 
     border-radius: 5px;  
     font-weight: bold;
+    font-size: 25px;
     border: 2px solid transparent;
+    font-family: 'Dancing Script', serif;
+    padding: 5px;
+    border: 2px solid #8F7C6B;
+    box-shadow: 0 4px 6px rgba(110, 75, 58, 0.3), /* Darker shadow */
+                0 1px 3px rgba(143, 124, 107, 0.1); /* Lighter shadow */
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 8px rgba(110, 75, 58, 0.4), /* Slightly stronger shadow on hover */
+                0 2px 4px rgba(143, 124, 107, 0.2); /* Enhancing the lighter shadow */
+    }
   } 
  
   input {
@@ -72,14 +84,15 @@ export const ContactFormStyle = styled.form`
     border-radius: 3px; 
     height: 20px;
     border: 1px solid #B0A295;
+    font-family: 'Roboto', sans-serif;
   }
 
   input:focus,
   input:focus,
   textarea:focus {
-    border-color: #8A6E5A;; /* Updated to a darker taupe */
+    border-color: #8A6E5A;
     box-shadow: 0 0 0 1px rgba(138, 110, 90, 0.25);
-    outline: 1px solid #6E4B3A; /* Removing default outline with a replacement */
+    outline: 1px solid #6E4B3A;
   }
 
   label {
@@ -101,16 +114,20 @@ export const ContactFormStyle = styled.form`
     transition: border-color 0.3s ease;
   }
 
-  textarea:focus {
-    border-color: #4B2E1F;
+  .valid {
+    border-color: #1E7B32; /* Green border for valid input */
+    outline: none;
   }
+
+.invalid {
+    border-color: #dc3545; /* Red border for invalid input */
+}
 `
 
 export const ContactStyleWrapper = styled.section`
-  box-sizing: border-box; 
-  background: #A7D8E8;
-  height: 100vh;   
+  box-sizing: border-box;
+  background: #1B3A57;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-   
 `

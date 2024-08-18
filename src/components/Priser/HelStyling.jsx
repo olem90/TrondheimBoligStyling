@@ -16,7 +16,7 @@ export const Helstyling = () => {
             </p>
                 
             <p className="subparagraf">  
-            *Ved helstyling gjelder alltid egne priser. 
+            <strong className="bullet">* </strong>Ved helstyling gjelder alltid egne priser. 
             Noen boliger mangler kun helstyling på enkelte rom mens andre mangler møbler i alle rom. 
             Prisen øker ut ifra hvor mye styling som behøves for å gjøre boligen klar til foto. 
             <br />

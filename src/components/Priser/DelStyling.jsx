@@ -19,7 +19,7 @@ export const Delstyling = () => {
                 </p>
 
                 <p className="subparagraf">
-                  *Ved delstyling gjelder alltid egne priser. 
+                <strong className="bullet">* </strong>Ved delstyling gjelder alltid egne priser. 
                   <br /> 
                   Noen boliger mangler kun planter og det lille ekstra mens andre mangler stort sett alt. 
                   <br />
