@@ -163,7 +163,8 @@ export const CloseButton = styled.span`
   position: absolute;
   top: 0px;
   right: 20px; 
-  cursor: pointer;    
+  cursor: pointer;
+  color: #000;
   font-size: 40px; 
 `;
  
@@ -173,9 +174,10 @@ export const ModalContent = styled.div`
   position: relative; 
   display: flex;    
   flex-direction: column;
-  background-color: #fff;
-  border: 7px solid silver; 
-  border-radius: 7px;  
+  background-color: #FAF9F6;
+  background: rgb(245, 245, 220);
+  border: 7px solid silver;
+  border-radius: 3px;  
   max-width: 760px;  
   max-height: 610px;   
   min-width: 760px;     
@@ -184,7 +186,7 @@ export const ModalContent = styled.div`
   
   .prev, .next { 
     position: absolute;     
-    top: 50%; 
+    top: 46%; 
     transform: translateY(-50%);
     border: none;
     cursor: pointer;
@@ -196,6 +198,7 @@ export const ModalContent = styled.div`
     background: rgba(255, 255, 255, 0.5);   
     padding: 20px;
     transition: opacity 0.5s ease;
+    outline: 1px solid transparent;
 
     &:hover {
       background: rgba(255, 255, 255, 0.8); 
@@ -223,8 +226,8 @@ export const ModalContent = styled.div`
     margin-top: 5px;
     overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap; /* Ensures thumbnails are in a single row */ 
-    scrollbar-width: thin; /* Makes the scrollbar thinner (for supported browsers) */  
+    white-space: nowrap; 
+    scrollbar-width: thin;
     scrollbar-color: #888 #e0e0e0;
     gap: 10px;
     min-height: 94px;
@@ -240,23 +243,21 @@ export const ModalContent = styled.div`
     border: 2px solid #000;
   }
   }
-`; 
+`;
 
 export const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateY(-12%);
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  min-height: 80vh;
   justify-content: center;
   align-items: center;
   z-index: 10;
 `;
- 
+
 export const GalleryStyleWrapper = styled.section` 
   height: 100vh;
   display: flex;

@@ -70,11 +70,11 @@ export const Gallery = forwardRef((props, ref) => {
             });
 
             clearTimeout(timeoutIdRef.current);
-            timeoutIdRef.current = setTimeout(hideButtons, 4000); // 4 seconds to hide
+            timeoutIdRef.current = setTimeout(hideButtons, 2500); // 4 seconds to hide
         };
 
         // Initially hide the buttons after 4 seconds
-        timeoutIdRef.current = setTimeout(hideButtons, 4000);
+        timeoutIdRef.current = setTimeout(hideButtons, 2500); 
 
         // Event listener for mouse movement
         document.addEventListener('mousemove', showButtons);

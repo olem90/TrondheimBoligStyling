@@ -73,8 +73,8 @@ export const ContactFormStyle = styled.form`
     transition: box-shadow 0.3s ease;
 
     &:hover {
-      box-shadow: 0 6px 8px rgba(110, 75, 58, 0.4), /* Slightly stronger shadow on hover */
-                0 2px 4px rgba(143, 124, 107, 0.2); /* Enhancing the lighter shadow */
+      box-shadow: 0 6px 8px rgba(110, 75, 58, 0.4), 
+                  0 2px 4px rgba(143, 124, 107, 0.2);
     }
   } 
  
@@ -100,7 +100,7 @@ export const ContactFormStyle = styled.form`
   }
 
   textarea {
-    padding: 10px;
+    padding:5px;
     background: #fff;
     border: 1px solid #D2B48C;
     min-height: 100px;
