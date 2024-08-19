@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const GalleryStyle = styled.div`
   box-sizing: border-box; 
-  width: 80%;  
+  width: 90%;  
   margin-inline: auto;
   display: flex; 
   flex-direction: column;  
   margin: auto;  
-  position: relative;  
-  height: 90%;
+  position: relative;
   
   .h2-front {
     text-align: center;  
@@ -21,7 +20,7 @@ export const GalleryStyle = styled.div`
  
   .gallery-page {  
     box-sizing: border-box; 
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     padding: 15px;
     transform-style: preserve-3d;   
@@ -29,32 +28,35 @@ export const GalleryStyle = styled.div`
     transform-origin: center;   
     perspective: 1000px;    
     margin: auto;
+   
 
     .back {
       box-sizing: border-box; 
       position: absolute;
       top: 0;
       left: 0; 
-      width: 100%; 
+      min-width: 100%;
       height: 100%;
-      backface-visibility: hidden;  
+      backface-visibility: hidden;
       transform: rotateY(0deg);
-      display: flex; 
-      justify-content: center; 
-      align-items: center;   
-      visibility: hidden; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
       flex-direction: column;
+      border: 2px solid black;
  
-      .pagination-buttons {  
-        box-sizing: border-box;  
-        display: flex; 
-        margin-top: 50px; 
+      .pagination-buttons {
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 20px;
         padding: 5p;
-        width: 88%;
+        width: 80%;
+        border: 2px solid blue;
         
         button {
           border: none;
-          outline: none; 
+          outline: none;
         }
            
         .lukk-galleri {    
@@ -73,7 +75,16 @@ export const GalleryStyle = styled.div`
         .current-page {
           font-weight: bold;
           text-decoration: underline 2px solid #000;
-        }   
+        }
+        
+      @media(max-width: 1500px) {
+          width: 95%;
+        }
+
+       @media(max-width: 1100px) {
+          width: 100%;
+        }
+
       } 
 
       .gallery-h2 { 
@@ -85,20 +96,44 @@ export const GalleryStyle = styled.div`
  
       .images-container {
         box-sizing: border-box;  
-        width: 88%;
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);  
-        gap: 25px 80px; 
+        gap: 25px 50px; 
+        border: 2px solid purple;
         
         img { 
-          max-height: 210px;  
-          min-width: 100%;    
+          max-height: 180px;
+          height: 100%;
+          width: 100%;
           object-fit: cover;    
+          max-width: 350px;
+
+          @media(max-width: 1100px) {
+            max-height: 180px; 
+          }
+          
+          @media(max-width: 900px) {
+            max-height: 150px;
+          }
  
           &:hover  {
             opacity: 1;
           }
         }
+      
+        @media(max-width: 1500px) {
+          width: 95%;
+        }
+
+        @media(max-width: 1100px) {
+          gap: 25px 30px;
+          width: 100%;
+        }
+
+        @media(max-width:700px) {
+            grid-template-columns: repeat(2, 1fr);   
+          }
       }
     } 
 
@@ -122,12 +157,16 @@ export const GalleryStyle = styled.div`
   } 
    
   .gallery-front-img { 
-    min-width: 100%;    
+    width: 100%;    
     object-fit: cover;    
-    height: 600px;       
+    height: 550px;       
     margin-inline: auto;  
     background-color: rgba(255, 255, 255, 0.4);     
     opacity: 1; 
+
+    @media(max-width: 1500px) {
+          height: 500px; 
+      }
   }  
   
   .galleri-link {
@@ -258,12 +297,13 @@ export const ModalBackdrop = styled.div`
   z-index: 10;
 `;
 
-export const GalleryStyleWrapper = styled.section` 
-  height: 100vh;
+export const GalleryStyleWrapper = styled.section`
+  box-sizing: border-box; 
+  min-height: 100vh;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
   background: #F0E1D1;
-`  
-
-
+  border: 3px solid red; 
+`

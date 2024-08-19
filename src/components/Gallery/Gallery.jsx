@@ -19,7 +19,7 @@ export const Gallery = forwardRef((props, ref) => {
     const [showFullGallery, setShowFullGallery] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [imagesPerPage] = useState(9);
+    const [imagesPerPage, setImagesPerPage] = useState(9);
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -40,6 +40,24 @@ export const Gallery = forwardRef((props, ref) => {
         setModalOpen(false);
         setSelectedImage(null);
     };
+
+    useEffect(() => {
+        const updateImagesPerPage = () => {
+            if (window.innerWidth <= 700) {
+                setImagesPerPage(6); // Show 6 images per page at 700px or less
+            } else {
+                setImagesPerPage(9); // Show 9 images per page otherwise
+            }
+        };
+    
+        updateImagesPerPage(); // Set the initial value
+    
+        window.addEventListener('resize', updateImagesPerPage);
+    
+        return () => {
+            window.removeEventListener('resize', updateImagesPerPage);
+        };
+    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
