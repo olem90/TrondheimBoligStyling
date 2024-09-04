@@ -19,10 +19,15 @@ export const Priser = forwardRef((props, ref) => {
             <PriserContainer>
                 <h2>Priser</h2>
                 <div className="buttons-container">
-                  <button onClick={() => handleButtonClick('veiledning')}>Interiørveiledning / rådgivningstime</button>
-                  <button onClick={() => handleButtonClick('ministyling')}>Ministyling</button>
-                  <button onClick={() => handleButtonClick('delstyling')}>Delstyling</button>
-                  <button onClick={() => handleButtonClick('helstyling')}>Helstyling</button>
+                  <div>
+                    <button onClick={() => handleButtonClick('veiledning')}>Interiørveiledning</button>
+                    <button onClick={() => handleButtonClick('ministyling')}>Ministyling</button>
+                  </div>
+
+                  <div>
+                    <button onClick={() => handleButtonClick('delstyling')}>Delstyling</button>
+                    <button className="helstyling-btn" onClick={() => handleButtonClick('helstyling')}>Helstyling</button>
+                  </div>   
                 </div>
                 {activeSection && (
           <div className="frame">

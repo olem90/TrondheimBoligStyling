@@ -417,7 +417,7 @@ export const Contact = forwardRef((props, ref) => {
                       <div>
                         <p>
                           <a>
-                            <FontAwesomeIcon icon={faPhone} /> 93271886
+                            <FontAwesomeIcon className="phone-icon" icon={faPhone} /> 93271886
                           </a>
                         </p>
                       </div>
@@ -425,7 +425,7 @@ export const Contact = forwardRef((props, ref) => {
                       <div>
                         <p>
                           <a href="https://www.instagram.com/trondheimboligstyling/?igsh=MWZhMW1hNm14OGY5bQ%3D%3D" target="_blank">
-                            <FontAwesomeIcon icon={faInstagram} /> Trondheimboligstyling
+                            <FontAwesomeIcon className="insta-icon" icon={faInstagram} /> Trondheimboligstyling
                           </a>  
                         </p>
                       </div>

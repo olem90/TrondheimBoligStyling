@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const ContactStyle = styled.div`
+  box-sizing: border-box;
   margin: auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   h1 {
     text-align: center;
     color: #E0F7FA;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Dancing Script', serif;
     font-size: 64px;
     font-weight: bold; 
   }
@@ -24,7 +26,9 @@ export const ContactStyle = styled.div`
   .kontakt {
     display: flex;
     flex-direction: column;
-    width: inherit;
+    width: clamp(400px, 50%, 500px); 
+    margin-inline: auto;
+    padding-block: 20px;
     
     div {
       margin-inline: auto;
@@ -38,19 +42,33 @@ export const ContactStyle = styled.div`
         color: #E0F7FA;
  
         &:hover {
-          color: #1A242F;
+          color: #fff;
           cursor: pointer; 
         }
+      }
+
+      .insta-icon {
+        color: #fff;
+        background: purple;
+        border-radius: 5px;
+      }
+
+      .phone-icon {
+        color: #2ecc71;
+      }
+
+      @media(max-width: 500px) {
+        width: clamp(350px, 50%, 500px); 
       }
   }
 ` 
 
 export const ContactFormStyle = styled.form`  
   box-sizing: border-box;
-  width: 600px;
+  width: clamp(400px, 50%, 500px); 
   display: flex; 
   flex-direction: column;
-  border: 2px solid #6E4B3A;  
+  border: 2px solid #6E4B3A;
   padding: 20px;
   margin: auto;
   background: #F0EDE5;
@@ -85,6 +103,7 @@ export const ContactFormStyle = styled.form`
     height: 20px;
     border: 1px solid #B0A295;
     font-family: 'Roboto', sans-serif;
+    color: #333333;
   }
 
   input:focus,
@@ -97,6 +116,12 @@ export const ContactFormStyle = styled.form`
 
   label {
     margin-block: 5px;
+    color: #333333; 
+  }
+
+  span {
+    color: #dc3545;
+    font-size: 15px;
   }
 
   textarea {
@@ -120,7 +145,11 @@ export const ContactFormStyle = styled.form`
   }
 
 .invalid {
-    border-color: #dc3545; /* Red border for invalid input */
+    border-color: #dc3545;
+}
+
+@media(max-width: 500px) {
+  width: clamp(350px, 50%, 500px); 
 }
 `
 

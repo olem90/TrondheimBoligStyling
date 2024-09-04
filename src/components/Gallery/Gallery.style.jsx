@@ -142,6 +142,8 @@ export const GalleryStyle = styled.div`
       backface-visibility: hidden;   
       opacity: 1; 
       transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction : column;
     }
 
     &.flipped { 
@@ -152,18 +154,17 @@ export const GalleryStyle = styled.div`
         visibility: visible;
       }
     }
-
-    
   } 
    
   .gallery-front-img { 
-    width: 100%;    
+    width: 100%; 
+    max-width: 1200px; 
     object-fit: cover;    
     height: 550px;       
     margin-inline: auto;  
     background-color: rgba(255, 255, 255, 0.4);     
-    opacity: 1; 
-
+    opacity: 1;
+    
     @media(max-width: 1500px) {
           height: 500px; 
       }
@@ -305,5 +306,4 @@ export const GalleryStyleWrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: #F0E1D1;
-  border: 3px solid red; 
 `
