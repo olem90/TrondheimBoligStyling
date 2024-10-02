@@ -35,14 +35,21 @@ export const PriserContainer = styled.div`
 
     @media(max-width: 900px) {
       width: clamp(400px, 75%, 100%);
-
-
     }
 
     @media(max-width: 700px) {
       width: clamp(240px, 85%, 100%);
       padding: 10px 20px;
+    }
 
+    @media(max-width: 500px) {
+      width: clamp(200px, 85%, 98%);
+      padding: 7px 14px;
+    }
+
+    @media(max-width: 320px) {
+      width: clamp(200px, 85%, 98%);
+      padding: 5px 10px;
     }
 }
 

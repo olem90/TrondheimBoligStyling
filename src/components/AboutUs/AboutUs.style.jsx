@@ -80,7 +80,6 @@ export const AboutUsStyleWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid green;
 ` 
 
 export const AboutUsContainer = styled.section`   

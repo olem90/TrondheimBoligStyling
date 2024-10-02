@@ -10,6 +10,10 @@ export const FooterStyle = styled.footer`
     width: fit-content;
     padding: 15px 10px;
     margin-left: 60px;
+
+    @media(max-width: 500px) {
+      margin: auto;
+    }
   }
 
   h2 {

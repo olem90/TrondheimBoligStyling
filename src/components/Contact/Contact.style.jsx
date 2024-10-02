@@ -30,14 +30,14 @@ export const ContactStyle = styled.div`
     margin-inline: auto;
     padding-block: 20px;
     
-    div {
+    .contact-links {
       margin-inline: auto;
       width: 100%;
       max-height: fit-content;
       margin-top: 10px;
       
       a {
-        font-size: 25px;
+        font-size: 24px;
         white-space: nowrap;  
         color: #E0F7FA;
  
@@ -45,6 +45,11 @@ export const ContactStyle = styled.div`
           color: #fff;
           cursor: pointer; 
         }
+
+      @media(max-width: 320px) {
+        font-size: 20px;
+    }
+
       }
 
       .insta-icon {
@@ -56,16 +61,22 @@ export const ContactStyle = styled.div`
       .phone-icon {
         color: #2ecc71;
       }
+    }
 
-      @media(max-width: 500px) {
-        width: clamp(350px, 50%, 500px); 
+    @media(max-width: 500px) {
+        width: 100%;
+        max-width: 90%;
       }
+
+    @media(max-width: 400px) {
+      max-width: 96%;
+    }
   }
 ` 
 
 export const ContactFormStyle = styled.form`  
   box-sizing: border-box;
-  width: clamp(400px, 30%, 500px); 
+  width: clamp(400px, 50%, 500px); 
   display: flex; 
   flex-direction: column;
   padding: 20px;
@@ -148,8 +159,13 @@ export const ContactFormStyle = styled.form`
   }
 
   @media(max-width: 500px) {
-    width: clamp(350px, 50%, 500px); 
+    width: 90%;
   }
+
+  @media(max-width: 400px) {
+    width: 96%;
+  }
+
 `
 
 export const ContactStyleWrapper = styled.section`

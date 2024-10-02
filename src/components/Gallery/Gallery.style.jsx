@@ -2,17 +2,20 @@ import styled from "styled-components";
 
 export const GalleryStyle = styled.div`
   box-sizing: border-box; 
-  width: 90%;  
-  margin-inline: auto;
+  width: 90%;
   display: flex;
   flex-direction: column;  
   margin: auto;
-  border: 2px solid green;
 
   @media(max-width: 500px) {
-          min-width: 95%;
-        }
-  
+        min-width: 95%;
+  }
+
+  @media(max-width: 400px) {
+        min-width: 95%;
+        max-height: 670px;
+  }
+
   .h2-front {
     text-align: center;  
     font-size: 54px;
@@ -27,7 +30,8 @@ export const GalleryStyle = styled.div`
         color: #000;
         font-family: 'Cormorant Garamond', serif;
         margin: auto;
-        padding: 0;
+        padding-bottom: 20px;
+
       }
  
   .gallery-page {  
@@ -38,8 +42,7 @@ export const GalleryStyle = styled.div`
     transform-origin: center;
     perspective: 1000px;    
     margin: auto;
-    border: 2px solid pink;
-   
+
     .back {
       box-sizing: border-box; 
       position: absolute;
@@ -54,7 +57,6 @@ export const GalleryStyle = styled.div`
       align-items: center;
       visibility: hidden;
       flex-direction: column;
-      border: 4px solid black;
       max-width: fit-content;
       margin: auto;
  
@@ -108,7 +110,6 @@ export const GalleryStyle = styled.div`
         min-height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        border: 2px solid red;
         
         img {
           max-height: 190px;
@@ -147,13 +148,22 @@ export const GalleryStyle = styled.div`
           }
 
         @media(max-width: 500px) {
-          min-height: 150px;
+          min-height: 90%;
+          gap: 5px 10px;
+        }
+
+        @media(max-width: 400px) {
+          min-height: 80%;
           gap: 5px 10px;
         }
       }
-        //.back media queries
+         //.back media queries
         @media(max-width: 500px) {
           min-width: 100%;
+        }
+
+        @media(max-width: 400px) {
+          max-height: fit-content;
         }
     } 
 
@@ -168,6 +178,10 @@ export const GalleryStyle = styled.div`
       display: flex;
       flex-direction : column;
       border: 4px solid gold;
+
+      @media(max-width: 400px) {
+        border: 2px solid red;
+      }
     }
 
     &.flipped { 
@@ -201,13 +215,23 @@ export const GalleryStyle = styled.div`
     margin-inline: auto;
     font-size: 44px;
     font-family: Lora, PlayfairDisplay, sans serif;
-    margin-top: 35px;
     transition: border 0.3s ease; 
+    white-space: nowrap; 
 
     &:hover { 
       cursor: pointer;
       border: 2px solid #8B5E3C; 
   } 
+
+    @media(max-width: 400px) {
+      font-size: 34px;
+      margin-top: 10px;
+    }
+
+    @media(max-width: 300px) {
+      font-size: 30px;
+      margin-top: 10px;
+    }
   }   
 `      
 

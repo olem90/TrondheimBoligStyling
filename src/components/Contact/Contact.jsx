@@ -413,7 +413,7 @@ export const Contact = forwardRef((props, ref) => {
                     </button>
                 </ContactFormStyle>
                 <div className="kontakt">
-                    <div>
+                    <div className="contact-links">
                       <div>
                         <p>
                           <a>
