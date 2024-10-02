@@ -169,7 +169,7 @@ export const PriserWrapper = styled.div`
   font-family: PlayfairDisplay, sans serif; 
   background: #F7F5EB;   
   border: 1px solid transparent;
-  padding-bottom: 210px;
-  padding-top: 110px;
+  padding-bottom: 180px;
+  padding-top: 90px;
 `   
 

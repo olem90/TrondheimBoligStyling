@@ -74,11 +74,13 @@ export const AboutUsStyle = styled.div`
 `
 
 export const AboutUsStyleWrapper = styled.section` 
+  box-sizing: border-box;
   background: #172338;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid green;
 ` 
 
 export const AboutUsContainer = styled.section`   

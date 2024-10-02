@@ -65,10 +65,9 @@ export const ContactStyle = styled.div`
 
 export const ContactFormStyle = styled.form`  
   box-sizing: border-box;
-  width: clamp(400px, 50%, 500px); 
+  width: clamp(400px, 30%, 500px); 
   display: flex; 
   flex-direction: column;
-  border: 2px solid #6E4B3A;
   padding: 20px;
   margin: auto;
   background: #F0EDE5;
@@ -140,23 +139,24 @@ export const ContactFormStyle = styled.form`
   }
 
   .valid {
-    border-color: #1E7B32; /* Green border for valid input */
+    border-color: #1E7B32;
     outline: none;
   }
 
-.invalid {
+  .invalid {
     border-color: #dc3545;
-}
+  }
 
-@media(max-width: 500px) {
-  width: clamp(350px, 50%, 500px); 
-}
+  @media(max-width: 500px) {
+    width: clamp(350px, 50%, 500px); 
+  }
 `
 
 export const ContactStyleWrapper = styled.section`
   box-sizing: border-box;
-  background: #1B3A57;
-  min-height: 100vh;
+  background: #1B3A57; 
+  background: #172338;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
 `

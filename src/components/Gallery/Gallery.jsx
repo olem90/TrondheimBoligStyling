@@ -3,7 +3,7 @@ import { GalleryStyle, GalleryStyleWrapper, ClickableImage, ModalBackdrop, Modal
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import bolig1 from "../../images/bolig1.jpg";
+import bolig1 from "../../images/bolig-1.jpg";
 import bolig2 from "../../images/bolig-2.jpg";
 import bolig3 from "../../images/bolig-3.jpg";
 import bolig4 from "../../images/bolig-4.jpg";
@@ -159,8 +159,17 @@ export const Gallery = forwardRef((props, ref) => {
     return (
         <GalleryStyleWrapper ref={ref}>
             <GalleryStyle>
+                {/* Conditionally render the <h2> based on showFullGallery */}
+                {showFullGallery && (
+                    // If the gallery is open, render <h2> above .gallery-page
+                    <h2 className="h2-back">Galleri</h2>
+                )}
+
                 <div className={`gallery-page ${showFullGallery ? 'flipped' : ''}`}>
-                {!showFullGallery && <h2 className="h2-front">Galleri</h2>} 
+                    {!showFullGallery && (
+                        // If the gallery is not open, render <h2> within .gallery-page
+                        <h2 className="h2-front">Galleri</h2>
+                    )}
                     <div className="front">
                         <img 
                           className={`gallery-front-img ${linkHovered ? 'link-hovered' : ''}`}
@@ -179,7 +188,6 @@ export const Gallery = forwardRef((props, ref) => {
                     </div>
 
                     <div className="back">
-                        <h2 className="gallery-h2">Galleri</h2> 
                         <div className="images-container">
                             {currentImages.map((image, index) => (
                                 <ClickableImage 
@@ -188,7 +196,17 @@ export const Gallery = forwardRef((props, ref) => {
                                     <img src={image} alt={`Gallery Preview ${index + 1}`}></img>  
                                 </ClickableImage>  
                             ))}
-                        </div> 
+                        </div>
+                        <div className="pagination-buttons">
+                            <Link onClick={handleGalleryOnClose} className="lukk-galleri">Lukk galleri</Link> 
+                            <button onClick={prevPage} disabled={currentPage === 1}>
+                                Prev
+                            </button>
+                            {renderPageNumbers}
+                            <button onClick={nextPage} disabled={currentPage * imagesPerPage >= images.length}> 
+                                Next
+                            </button>
+                        </div>
  
                         {modalOpen && (
                             <ModalBackdrop > 
@@ -216,16 +234,7 @@ export const Gallery = forwardRef((props, ref) => {
                             </ModalBackdrop>
                         )}
                         
-                        <div className="pagination-buttons">
-                            <Link onClick={handleGalleryOnClose} className="lukk-galleri">Lukk galleri</Link> 
-                            <button onClick={prevPage} disabled={currentPage === 1}>
-                                Prev
-                            </button>
-                            {renderPageNumbers}
-                            <button onClick={nextPage} disabled={currentPage * imagesPerPage >= images.length}> 
-                                Next
-                            </button>
-                        </div>
+                       
                     </div>
                 </div>
             </GalleryStyle>

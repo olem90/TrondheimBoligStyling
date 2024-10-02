@@ -23,12 +23,12 @@ export const Header = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scro
     }, []);
 
     return (
-        <HeaderStyle $bgimage={images[currentImageIndex].src}> 
+        <HeaderStyle $bgimage={images[currentImageIndex].src}>
             <Nav 
-            scrollToPriser={scrollToPriser}
-            scrollToContact={scrollToContact}
-            scrollToAboutUs={scrollToAboutUs} 
-            scrollToGallery={scrollToGallery} 
+                scrollToPriser={scrollToPriser}
+                scrollToContact={scrollToContact}
+                scrollToAboutUs={scrollToAboutUs} 
+                scrollToGallery={scrollToGallery} 
             />
             <HeaderText currentImageIndex={currentImageIndex} />
         </HeaderStyle>

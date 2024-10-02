@@ -4,10 +4,14 @@ export const GalleryStyle = styled.div`
   box-sizing: border-box; 
   width: 90%;  
   margin-inline: auto;
-  display: flex; 
+  display: flex;
   flex-direction: column;  
-  margin: auto;  
-  position: relative;
+  margin: auto;
+  border: 2px solid green;
+
+  @media(max-width: 500px) {
+          min-width: 95%;
+        }
   
   .h2-front {
     text-align: center;  
@@ -17,51 +21,57 @@ export const GalleryStyle = styled.div`
     font-weight: bold; 
     margin: 0 0 30px 0; 
   }
+
+  .h2-back {
+        font-size: 48px;
+        color: #000;
+        font-family: 'Cormorant Garamond', serif;
+        margin: auto;
+        padding: 0;
+      }
  
   .gallery-page {  
     box-sizing: border-box; 
-    min-width: 100%;
-    height: 100%;
-    padding: 15px;
+    width: 100%;
     transform-style: preserve-3d;   
     transition: transform 0.8s;  
-    transform-origin: center;   
+    transform-origin: center;
     perspective: 1000px;    
     margin: auto;
+    border: 2px solid pink;
    
-
     .back {
       box-sizing: border-box; 
       position: absolute;
       top: 0;
       left: 0; 
-      min-width: 100%;
+      right: 0;
       height: 100%;
       backface-visibility: hidden;
       transform: rotateY(0deg);
       display: flex;
-      justify-content: center;
+      display-content: center;
       align-items: center;
       visibility: hidden;
       flex-direction: column;
-      border: 2px solid black;
+      border: 4px solid black;
+      max-width: fit-content;
+      margin: auto;
  
       .pagination-buttons {
         box-sizing: border-box;
         display: flex;
-        margin-top: 20px;
-        padding: 5p;
-        width: 80%;
-        border: 2px solid blue;
+        margin-top: 15px;
+        min-width: 100%;
         
         button {
           border: none;
-          outline: none;
+          padding: 5px 8px;
+          margin-inline: 2px;
         }
            
         .lukk-galleri {    
           display: flex;
-          margin-left: 240px;
           margin-right: auto;    
           justify-content: center;
           align-items: center;    
@@ -70,6 +80,7 @@ export const GalleryStyle = styled.div`
           color: #000;
           text-decoration: underline;
           margin-left: 0;
+          padding-left: 0;
         }  
  
         .current-page {
@@ -78,77 +89,90 @@ export const GalleryStyle = styled.div`
         }
         
       @media(max-width: 1500px) {
-          width: 95%;
+          width: 90%;
         }
 
        @media(max-width: 1100px) {
           width: 100%;
         }
 
+        @media(max-width: 500px) {
+          min-width: 100%;
+        }
       } 
 
-      .gallery-h2 { 
-        font-size: 54px;
-        color: #000;
-        font-family: 'Cormorant Garamond', serif; 
-        margin: 0 0 30px 0;
-      }
- 
       .images-container {
-        box-sizing: border-box;  
-        width: 80%;
+        box-sizing: border-box;
+        max-width: fit-content;
+        gap: 10px 100px;
+        min-height: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);  
-        gap: 25px 50px; 
-        border: 2px solid purple;
+        grid-template-columns: repeat(3, 1fr);
+        border: 2px solid red;
         
-        img { 
-          max-height: 180px;
+        img {
+          max-height: 190px;
           height: 100%;
           width: 100%;
-          object-fit: cover;    
-          max-width: 350px;
+          object-fit: cover;
 
           @media(max-width: 1100px) {
-            max-height: 180px; 
+            max-height: 180px;
+            width: clamp(120px, 100%, 320px);
+            aspect-ratio: 16 / 12;
           }
           
           @media(max-width: 900px) {
-            max-height: 150px;
+            min-height: 180px;
+            aspect-ratio: 16 / 12;
           }
- 
-          &:hover  {
-            opacity: 1;
-          }
-        }
-      
-        @media(max-width: 1500px) {
-          width: 95%;
-        }
 
-        @media(max-width: 1100px) {
-          gap: 25px 30px;
+          @media(max-width: 500px) {
+            min-height: 150px;
+          }
+        }
+        
+        @media(max-width: 1500px) {
+          gap: 5px 40px;
           width: 100%;
         }
 
+        @media(max-width: 1100px) {
+          gap: 5px 30px;
+        }
+
         @media(max-width:700px) {
-            grid-template-columns: repeat(2, 1fr);   
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 20px;
           }
+
+        @media(max-width: 500px) {
+          min-height: 150px;
+          gap: 5px 10px;
+        }
       }
+        //.back media queries
+        @media(max-width: 500px) {
+          min-width: 100%;
+        }
     } 
 
     .front {
       box-sizing: border-box; 
       backface-visibility: hidden;   
-      opacity: 1; 
+      opacity: 1;
+      height: 100%;
+      margin: auto;
+      max-width: 1000px;
       transition: opacity 0.3s ease;
       display: flex;
       flex-direction : column;
+      border: 4px solid gold;
     }
 
     &.flipped { 
-      transform: rotateY(180deg); 
-
+      transform: rotateY(180deg);
+      
       .back {
         transform: rotateY(180deg);
         visibility: visible;
@@ -160,14 +184,10 @@ export const GalleryStyle = styled.div`
     width: 100%; 
     max-width: 1200px; 
     object-fit: cover;    
-    height: 550px;       
+    height: 500px;       
     margin-inline: auto;  
     background-color: rgba(255, 255, 255, 0.4);     
     opacity: 1;
-    
-    @media(max-width: 1500px) {
-          height: 500px; 
-      }
   }  
   
   .galleri-link {
@@ -300,7 +320,7 @@ export const ModalBackdrop = styled.div`
 
 export const GalleryStyleWrapper = styled.section`
   box-sizing: border-box; 
-  min-height: 100vh;
+  min-height: 100svh;
   width: 100%; 
   display: flex;
   justify-content: center;
