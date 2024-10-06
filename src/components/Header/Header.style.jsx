@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const HeaderStyle = styled.header` 
+export const HeaderStyle = styled.header`
+  height: 100vh;
   height: 100svh;
   width: 100%;
   display: flex;
@@ -17,6 +18,7 @@ export const HeaderStyle = styled.header`
     background-image: url(${props => props.$bgimage});
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
     z-index: -1;
   }
 `
