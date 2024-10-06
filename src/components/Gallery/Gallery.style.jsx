@@ -177,7 +177,6 @@ export const GalleryStyle = styled.div`
       transition: opacity 0.3s ease;
       display: flex;
       flex-direction : column;
-      border: 4px solid gold;
 
       @media(max-width: 400px) {
         border: 2px solid red;

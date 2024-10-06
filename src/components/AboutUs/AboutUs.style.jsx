@@ -107,7 +107,7 @@ export const AboutUsText = styled.div`
   font-size: 20px;
 
   p {
-    margin: 0;
+    
   }
 ` 
 

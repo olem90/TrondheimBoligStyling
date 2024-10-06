@@ -14,17 +14,21 @@ export const AboutUs = forwardRef((props, ref) => {
                     </div>
                     <AboutUsText>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Non nostrum laudantium architecto veritatis aperiam omnis maxime quibusdam? 
-                            Quasi cumque sit vero tenetur, modi laborum voluptas nobis temporibus totam sequi nemo.    
- 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Non nostrum laudantium architecto veritatis aperiam omnis maxime quibusdam? 
-                            Quasi cumque sit vero tenetur, modi laborum voluptas nobis temporibus totam sequi nemo. 
+                            Trondheim Bolig Styling spesialiserer seg på å gjøre din bolig klar for salg. 
+                            Vi vet hvor viktig det er å presentere hjemmet fra sin beste side når det legges ut på markedet. 
+                            Vårt mål er å skape en atmosfære som appellerer til potensielle kjøpere og fremhever boligens unike kvaliteter, 
+                            slik at den skiller seg ut i mengden og tiltrekker seg flere interessenter.
+                        </p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Non nostrum laudantium architecto veritatis aperiam omnis maxime quibusdam? 
-                            Quasi cumque sit vero tenetur, modi laborum voluptas nobis temporibus totam sequi nemo.             
+                        <p>
+                            Med erfaring og et øye for detaljer sørger vi for at hver bolig blir stylet på en måte som gjør den innbydende og attraktiv for kjøpere. 
+                            Vi tilbyr alt fra delstyling til fullstyling, avhengig av behovet for hver enkelt bolig. 
+                            Vårt team har god kjennskap til markedet og vet hva som skal til for å fremheve hjemmet ditt på best mulig måte.
+                        </p>
+                           
+                        <p>
+                            Når du velger Trondheim Bolig Styling, 
+                            kan du være trygg på at boligen din blir presentert med stil og finesse for å gi det beste inntrykket på visning – og bidra til et raskere salg.           
                         </p> 
                     </AboutUsText>
                 </AboutUsContainer>
