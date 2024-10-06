@@ -1,6 +1,5 @@
 #root {
   min-width: 100%;
-  --vh: 100vh;
 }
 
 *, *::before, *::after {
