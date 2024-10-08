@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
   height: 100dvh;
+  max-height: 95vh;
   width: 100%;
   display: flex;
   position: relative;
-   
+
   &::before {
     content: '';
     position: absolute;
