@@ -21,6 +21,6 @@ export const HeaderStyle = styled.header`
   }
 
   @media (max-width: 600px) {
-    min-height: 100%; 
+     height: auto;
   }
 `

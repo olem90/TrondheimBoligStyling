@@ -8,12 +8,12 @@ export const GalleryStyle = styled.div`
   margin: auto;
 
   @media(max-width: 500px) {
-        min-width: 95%;
+        width: 95%;
   }
 
   @media(max-width: 400px) {
-        min-width: 95%;
-        max-height: 670px;
+        width: 95%;
+        height: auto;
   }
 
   .h2-front {
@@ -355,3 +355,5 @@ export const GalleryStyleWrapper = styled.section`
      
   }
 `
+
+
