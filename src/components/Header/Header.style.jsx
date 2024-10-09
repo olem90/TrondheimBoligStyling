@@ -19,4 +19,10 @@ export const HeaderStyle = styled.header`
     background-position: center;
     z-index: -1;
   }
+
+  @media (max-width: 600px) {
+    height: auto;
+    min-height: 400px;
+    max-height: 600px;  
+  }
 `
