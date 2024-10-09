@@ -224,12 +224,10 @@ export const GalleryStyle = styled.div`
 
     @media(max-width: 400px) {
       font-size: 34px;
-      margin-top: 10px;
     }
 
     @media(max-width: 300px) {
       font-size: 30px;
-      margin-top: 10px;
     }
   }   
 `      
@@ -342,7 +340,8 @@ export const ModalBackdrop = styled.div`
 `;
 
 export const GalleryStyleWrapper = styled.section`
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  height: 100vh;
   height: 100dvh;
   width: 100%; 
   display: flex;
@@ -351,7 +350,7 @@ export const GalleryStyleWrapper = styled.section`
   background: #F0E1D1;
 
   @media (max-width: 600px) {
-    min-height: 100%;
+    height: 100%;
      
   }
 `
