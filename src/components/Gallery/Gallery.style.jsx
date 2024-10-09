@@ -343,7 +343,7 @@ export const ModalBackdrop = styled.div`
 
 export const GalleryStyleWrapper = styled.section`
   box-sizing: border-box; 
-  height: calc(100vh - 50px);
+  height: 100dvh;
   width: 100%; 
   display: flex;
   justify-content: center;
