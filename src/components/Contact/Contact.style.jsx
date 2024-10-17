@@ -13,7 +13,6 @@ export const ContactStyle = styled.div`
     font-family: 'Dancing Script', serif;
     font-size: 64px;
     font-weight: bold; 
-    border: 2px solid red;
   }
   
   h2 {

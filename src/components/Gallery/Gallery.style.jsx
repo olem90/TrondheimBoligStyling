@@ -41,7 +41,6 @@ export const GalleryStyle = styled.div`
     transform-origin: center;
     perspective: 1000px;    
     margin: auto;
-    border: 2px solid white;
     padding-block: 30px;
 
     .back {
@@ -181,7 +180,6 @@ export const GalleryStyle = styled.div`
       transition: opacity 0.3s ease;
       display: flex;
       flex-direction : column;
-      border: 2px solid red;
 
       @media(max-width: 400px) {
         border: 2px solid red;
