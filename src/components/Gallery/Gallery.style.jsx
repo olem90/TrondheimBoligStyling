@@ -6,7 +6,6 @@ export const GalleryStyle = styled.div`
   display: flex;
   flex-direction: column;  
   margin: auto;
-  border: 2px solid red;
 
   @media(max-width: 500px) {
         width: 95%;
@@ -43,6 +42,7 @@ export const GalleryStyle = styled.div`
     perspective: 1000px;    
     margin: auto;
     border: 2px solid white;
+    padding-block: 30px;
 
     .back {
       box-sizing: border-box; 
@@ -181,7 +181,7 @@ export const GalleryStyle = styled.div`
       transition: opacity 0.3s ease;
       display: flex;
       flex-direction : column;
-      border: 2px solid white;
+      border: 2px solid red;
 
       @media(max-width: 400px) {
         border: 2px solid red;
@@ -354,7 +354,6 @@ export const GalleryStyleWrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: #F0E1D1;
-  border: 2px solid red;
 
   @media(max-width: 800px) {
     height: 100%;

@@ -11,11 +11,10 @@ export const AboutUsStyle = styled.div`
     font-family: 'Dancing Script', serif;
     font-size: 65px;
     margin: 0;
-    padding-bottom: 30px;
+    padding-block: 30px;
 
     @media (max-width: 500px) {
       font-size: 44px;
-      padding-bottom: 16px;
     }
   }
 
