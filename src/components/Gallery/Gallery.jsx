@@ -31,24 +31,6 @@ export const Gallery = forwardRef((props, ref) => {
     const modalContentRef = useRef(null); 
     const timeoutIdRef = useRef(null);
 
-    useEffect(() => {
-        const setViewportHeight = () => {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        };
-
-        // Set height on load
-        setViewportHeight();
-
-        // Recalculate on window resize
-        window.addEventListener('resize', setViewportHeight);
-
-        // Clean up the event listener on unmount
-        return () => {
-            window.removeEventListener('resize', setViewportHeight);
-        };
-    }, []);
-
     const openModalWithImage = (index) => {
         setSelectedImage(index); 
         setModalOpen(true);

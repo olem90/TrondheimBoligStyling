@@ -121,9 +121,11 @@ export const AboutUsText = styled.div`
   width: 100%;
   font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
+  line-height: 28px;
 
   @media (max-width: 500px) {
     font-size: 16px;
+    line-height: 22px;
   }
 
   @media (max-width: 350px) {

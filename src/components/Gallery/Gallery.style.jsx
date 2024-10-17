@@ -176,10 +176,6 @@ export const GalleryStyle = styled.div`
       transition: opacity 0.3s ease;
       display: flex;
       flex-direction : column;
-
-      @media(max-width: 400px) {
-        border: 2px solid red;
-      }
     }
 
     &.flipped { 
@@ -236,16 +232,26 @@ export const ClickableImage = styled.button`
   background: none;
   padding: 0; 
   cursor: pointer;
-  max-height: 210px;  
+  max-height: 210px;
 `;
 
-export const CloseButton = styled.span`
+export const CloseButton = styled.button`
+  box-sizing: border-box;
   position: absolute;
-  top: 0px;
-  right: 20px; 
+  top: 10px;
+  right: 30px; 
   cursor: pointer;
   color: #000;
-  font-size: 40px; 
+  font-size: 70px;
+  padding: 0;
+  margin-top: 20px;
+  height: 42px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 `;
  
 export const ModalContent = styled.div`  
@@ -258,11 +264,18 @@ export const ModalContent = styled.div`
   background: rgb(245, 245, 220);
   border: 7px solid silver;
   border-radius: 3px;  
-  max-width: 760px;  
-  max-height: 610px;   
-  min-width: 760px;     
-  min-height: 610px;   
+  max-width: 90%;  
+  max-height: 100%;
+  min-width: 70%;     
+  min-height: 80%;
   overflow: hidden;
+  
+  @media(max-width: 700px) {
+    max-width: 105%;  
+    max-height: 700px;   
+    min-width: 105%;  
+    min-height: 80%;
+  }
   
   .prev, .next { 
     position: absolute;     
@@ -294,11 +307,14 @@ export const ModalContent = styled.div`
   } 
   
   .modal-img {  
-    margin: 0;  
-    max-width: 715px;     
-    min-width: 715px;      
-    max-height: 470px;   
-    min-height: 470px;       
+    margin: 0;      
+    min-width: 100%; 
+    min-height: 470px;
+    max-height: 470px;
+
+    @media(max-width: 800px) {
+      max-width: 98%;
+    }
   }   
 
   .thumbnails {  
@@ -320,7 +336,7 @@ export const ModalContent = styled.div`
   }
 
   .thumb-img.active {
-    border: 2px solid #000;
+    border: 2px solid #0B0C1A;
   }
   }
 `;
@@ -352,6 +368,7 @@ export const GalleryStyleWrapper = styled.section`
   @media(max-width: 800px) {
     height: 100%;
     min-height: 100%;
+    padding-block: 40px 60px;
   }
 `
 

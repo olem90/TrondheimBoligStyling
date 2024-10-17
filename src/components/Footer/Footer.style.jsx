@@ -27,8 +27,6 @@ export const FooterStyle = styled.footer`
   a {
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
   }
-  
-  
-  
 ` 
