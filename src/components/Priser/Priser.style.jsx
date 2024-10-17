@@ -16,37 +16,22 @@ export const PriserContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: #FAFAFA;
     padding: 10px 30px;
-    box-shadow:
-        0 0 0 2px rgba(25, 25, 112, 0.1), 
-        0 0 4px 2px rgba(0, 0, 128, 0.4);
+    box-shadow: 0 0 0 2px rgb(240, 234, 214);
     border-radius: 1px;
-    width: clamp(500px, 50%, 100%);
+    width: 95%;
     margin-block: 40px;
-
     text-align: center;
     margin-inline: auto;
 
-    @media(max-width: 1200px) {
-      width: clamp(400px, 60%, 100%);
-    }
-
-    @media(max-width: 900px) {
-      width: clamp(400px, 75%, 100%);
-    }
-
     @media(max-width: 700px) {
-      width: clamp(240px, 85%, 100%);
       padding: 10px;
     }
 
-    @media(max-width: 500px) {
-      width: clamp(200px, 85%, 98%);
-    }
-
     @media(max-width: 320px) {
-      width: clamp(200px, 85%, 98%);
+      width: 97%;
+      padding: 6px;
     }
 }
 
@@ -74,7 +59,7 @@ export const PriserContainer = styled.div`
       color: #000;
       background: #F0EAD6;
       border: 1px solid #000;
-
+      
       &:hover  {
         box-shadow: 0 1px 3px rgba(100, 80, 65, 0.9);
       }
@@ -122,7 +107,7 @@ export const PriserContainer = styled.div`
   h2 {
    text-align: center;
    font-size: 45px;
-   margin-top: 60px;
+   margin-top: 20px;
    font-family: 'Lora', serif;
    color: #000;
   }
@@ -176,13 +161,14 @@ export const PriserWrapper = styled.div`
   min-height: 100vh;
   min-height: 100dvh;
   font-family: PlayfairDisplay, sans serif; 
-  background: #F7F5EB;   
+  background: #F7F5EB;
   border: 1px solid transparent;
-  padding-block: 60px;
+  padding-block: 30px 60px;
 
   @media(max-width: 800px) {
     height: 100%;
     min-height: 100%;
+    padding-block: 80px 100px;
   }
-`   
+`
 

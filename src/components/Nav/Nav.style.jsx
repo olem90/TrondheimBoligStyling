@@ -147,6 +147,7 @@ export const NavStyle = styled.nav`
       font-size: 20px;
       font-family: 'Lora', serif;
       transition: .3s ease;
+      text-decoration: none;
 
       &:hover {
         color: #D4AF37; 

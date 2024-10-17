@@ -40,6 +40,7 @@ export const ContactStyle = styled.div`
         font-size: 24px;
         white-space: nowrap;  
         color: #E0F7FA;
+        text-decoration: none;
  
         &:hover {
           color: #fff;
@@ -107,7 +108,7 @@ export const ContactFormStyle = styled.form`
   } 
  
   input {
-    padding: 5px;
+    padding: 10px;
     background: #fff; 
     border-radius: 3px; 
     height: 20px;
