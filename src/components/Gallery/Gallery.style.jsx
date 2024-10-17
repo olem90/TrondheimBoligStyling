@@ -11,10 +11,6 @@ export const GalleryStyle = styled.div`
         width: 95%;
   }
 
-  @media(max-width: 400px) {
-        
-  }
-
   .h2-front {
     text-align: center;  
     font-size: 54px;
