@@ -13,9 +13,10 @@ export const AboutUsStyle = styled.div`
     margin: 0;
     padding-bottom: 30px;
 
-  @media (max-width: 500px) {
-    font-size: 44px;
-  }
+    @media (max-width: 500px) {
+      font-size: 44px;
+      padding-bottom: 16px;
+    }
   }
 
   .marita1 {
@@ -120,7 +121,7 @@ export const AboutUsText = styled.div`
   font-size: 20px;
 
   @media (max-width: 500px) {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   @media (max-width: 350px) {
