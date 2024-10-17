@@ -87,7 +87,8 @@ export const AboutUsStyle = styled.div`
 export const AboutUsStyleWrapper = styled.section` 
   box-sizing: border-box;
   background: #172338;
-  min-height: calc(var(--vh, 1vh) * 100); 
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
   justify-content: center;
