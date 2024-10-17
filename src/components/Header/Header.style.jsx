@@ -8,8 +8,8 @@ export const HeaderStyle = styled.header`
   position: relative;
 
   @media(max-width: 600px) {
-    height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   &::before {
