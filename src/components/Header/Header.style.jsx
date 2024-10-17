@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const HeaderStyle = styled.header`
   min-height: 100vh;
   min-height: 100dvh;
-  max-height: 100vh;
-  max-height: 100dvh;
   width: 100%;
   display: flex;
   position: relative;
+
+  @media(max-width: 600px) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
 
   &::before {
     content: '';

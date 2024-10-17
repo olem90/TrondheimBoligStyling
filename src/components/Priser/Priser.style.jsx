@@ -179,5 +179,10 @@ export const PriserWrapper = styled.div`
   border: 1px solid transparent;
   padding-bottom: 180px;
   padding-top: 90px;
+
+  @media(max-width: 600px) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
 `   
 

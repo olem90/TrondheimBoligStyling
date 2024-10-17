@@ -173,7 +173,13 @@ export const ContactStyleWrapper = styled.section`
   box-sizing: border-box;
   background: #1B3A57; 
   background: #172338;
-  min-height: 100svh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
+
+  @media(max-width: 600px) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
 `

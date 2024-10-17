@@ -347,14 +347,19 @@ export const ModalBackdrop = styled.div`
 
 export const GalleryStyleWrapper = styled.section`
   box-sizing: border-box;
-  min-height: calc(var(--vh, 1vh) * 100);
-  max-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
   background: #F0E1D1;
   border: 2px solid red;
+
+  @media(max-width: 600px) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
 `
 
 
