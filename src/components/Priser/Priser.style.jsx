@@ -65,14 +65,15 @@ export const PriserContainer = styled.div`
     button {
       box-shadow: 0 1px 3px rgba(143, 124, 107, 0.7);
       font-size: 20px;
-      border-radius: 5px;
+      border-radius: 3px;
       font-family: 'Cormorant Garamond', serif;
       font-weight: bold;
       padding: 6px 15px;
       border: 2px solid transparent;
       transition: box-shadow 0.2s ease;
       color: #000;
-      background: #F7F5EB;
+      background: #F0EAD6;
+      border: 1px solid #000;
 
       &:hover  {
         box-shadow: 0 1px 3px rgba(100, 80, 65, 0.9);
@@ -177,8 +178,7 @@ export const PriserWrapper = styled.div`
   font-family: PlayfairDisplay, sans serif; 
   background: #F7F5EB;   
   border: 1px solid transparent;
-  padding-bottom: 180px;
-  padding-top: 90px;
+  padding-block: 60px;
 
   @media(max-width: 800px) {
     height: 100%;
