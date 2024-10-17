@@ -23,7 +23,7 @@ export const AboutUs = forwardRef((props, ref) => {
                         <p>
                             Med erfaring og et øye for detaljer sørger vi for at hver bolig blir stylet på en måte som gjør den innbydende og attraktiv for kjøpere. 
                             Vi tilbyr alt fra delstyling til fullstyling, avhengig av behovet for hver enkelt bolig. 
-                            Vårt team har god kjennskap til markedet og vet hva som skal til for å fremheve hjemmet ditt på best mulig måte.
+                            Vi har god kjennskap til markedet og vet hva som skal til for å fremheve hjemmet ditt på best mulig måte.
                         </p>
                            
                         <p>

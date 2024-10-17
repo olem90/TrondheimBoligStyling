@@ -16,7 +16,7 @@ export const PriserContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: #fff;
     padding: 10px 30px;
     box-shadow:
         0 0 0 2px rgba(25, 25, 112, 0.1), 
@@ -30,7 +30,6 @@ export const PriserContainer = styled.div`
 
     @media(max-width: 1200px) {
       width: clamp(400px, 60%, 100%);
-
     }
 
     @media(max-width: 900px) {
@@ -39,17 +38,15 @@ export const PriserContainer = styled.div`
 
     @media(max-width: 700px) {
       width: clamp(240px, 85%, 100%);
-      padding: 10px 20px;
+      padding: 10px;
     }
 
     @media(max-width: 500px) {
       width: clamp(200px, 85%, 98%);
-      padding: 7px 14px;
     }
 
     @media(max-width: 320px) {
       width: clamp(200px, 85%, 98%);
-      padding: 5px 10px;
     }
 }
 

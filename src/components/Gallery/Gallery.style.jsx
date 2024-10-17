@@ -12,8 +12,7 @@ export const GalleryStyle = styled.div`
   }
 
   @media(max-width: 400px) {
-        width: 95%;
-        height: auto;
+        
   }
 
   .h2-front {
@@ -70,6 +69,9 @@ export const GalleryStyle = styled.div`
           border: none;
           padding: 5px 8px;
           margin-inline: 2px;
+          background: #000;
+          color: #fff;
+          border-radius: 5px;
         }
            
         .lukk-galleri {    
@@ -87,7 +89,7 @@ export const GalleryStyle = styled.div`
  
         .current-page {
           font-weight: bold;
-          text-decoration: underline 2px solid #000;
+          text-decoration: underline 2px solid #fff;
         }
         
       @media(max-width: 1500px) {
@@ -327,6 +329,7 @@ export const ModalContent = styled.div`
 `;
 
 export const ModalBackdrop = styled.div`
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
@@ -341,18 +344,15 @@ export const ModalBackdrop = styled.div`
 
 export const GalleryStyleWrapper = styled.section`
   box-sizing: border-box;
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
   width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
   background: #F0E1D1;
-
-  @media (max-width: 600px) {
-    height: 100%;
-     
-  }
 `
 
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterStyle = styled.footer`
   background: #000;
   max-width: 100%;
-  height: 100%;
+  max-height: 300px;
   border: 2px solid transparent;
 
   .footer-content {
