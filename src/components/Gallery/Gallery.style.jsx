@@ -356,9 +356,9 @@ export const GalleryStyleWrapper = styled.section`
   background: #F0E1D1;
   border: 2px solid red;
 
-  @media(max-width: 600px) {
-    min-height: 100vh;
-    min-height: 100svh;
+  @media(max-width: 800px) {
+    height: 100%;
+    min-height: 100%;
   }
 `
 

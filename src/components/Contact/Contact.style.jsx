@@ -178,7 +178,7 @@ export const ContactStyleWrapper = styled.section`
   display: flex;
   flex-direction: column;
 
-  @media(max-width: 600px) {
+  @media(max-width: 800px) {
     height: 100%;
     min-height: 100%;
   }

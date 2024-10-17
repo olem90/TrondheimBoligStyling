@@ -7,7 +7,7 @@ export const HeaderStyle = styled.header`
   display: flex;
   position: relative;
 
-  @media(max-width: 600px) {
+  @media(max-width: 800px) {
     min-height: 100vh;
     min-height: 100svh;
   }

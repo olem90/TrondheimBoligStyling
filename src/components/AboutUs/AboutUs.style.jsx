@@ -93,7 +93,7 @@ export const AboutUsStyleWrapper = styled.section`
   align-items: center;
   justify-content: center;
 
-  @media(max-width: 600px) {
+  @media(max-width: 800px) {
     height: 100%;
     min-height: 100%;
   }

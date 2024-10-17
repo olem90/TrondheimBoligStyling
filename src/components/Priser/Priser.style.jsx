@@ -180,7 +180,7 @@ export const PriserWrapper = styled.div`
   padding-bottom: 180px;
   padding-top: 90px;
 
-  @media(max-width: 600px) {
+  @media(max-width: 800px) {
     height: 100%;
     min-height: 100%;
   }
