@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const HeaderStyle = styled.header`
   min-height: 100vh;
   min-height: 100dvh;
-  width: 100%;
   display: flex;
   position: relative;
 
