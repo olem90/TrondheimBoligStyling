@@ -1,8 +1,27 @@
 import { AboutUsStyle, AboutUsStyleWrapper, AboutUsContainer, AboutUsText } from "./AboutUs.style";
 import React, { forwardRef } from 'react';
+import { useEffect } from "react";
 import marita1 from "../../images/marita1.jpg";
 
 export const AboutUs = forwardRef((props, ref) => {
+
+    useEffect(() => {
+        const setViewportHeight = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+
+        // Set height on load
+        setViewportHeight();
+
+        // Recalculate on window resize
+        window.addEventListener('resize', setViewportHeight);
+
+        // Clean up the event listener on unmount
+        return () => {
+            window.removeEventListener('resize', setViewportHeight);
+        };
+    }, []);
     
     return (
         <AboutUsStyleWrapper ref={ref}>

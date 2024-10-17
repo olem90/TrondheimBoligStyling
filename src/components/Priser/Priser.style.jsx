@@ -174,8 +174,6 @@ export const PriserWrapper = styled.div`
   display: flex;
   min-height: 100vh;
   min-height: 100dvh;
-  max-height: 100vh;
-  max-height: 100dvh;
   font-family: PlayfairDisplay, sans serif; 
   background: #F7F5EB;   
   border: 1px solid transparent;
