@@ -264,17 +264,15 @@ export const ModalContent = styled.div`
   background: rgb(245, 245, 220);
   border: 7px solid silver;
   border-radius: 3px;  
+  
   max-width: 90%;  
-  max-height: 100%;
-  min-width: 70%;     
-  min-height: 80%;
+  max-height: 90%;
+  width: 900px;
+  height: auto;
   overflow: hidden;
   
   @media(max-width: 700px) {
-    max-width: 105%;  
-    max-height: 700px;   
-    min-width: 105%;  
-    min-height: 80%;
+    
   }
   
   .prev, .next { 
@@ -309,8 +307,8 @@ export const ModalContent = styled.div`
   .modal-img {  
     margin: 0;      
     min-width: 100%; 
-    min-height: 470px;
-    max-height: 470px;
+    min-height: 550px;
+    max-height: 550px;
 
     @media(max-width: 800px) {
       max-width: 98%;
@@ -348,7 +346,7 @@ export const ModalBackdrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -159,6 +159,33 @@ export const Gallery = forwardRef((props, ref) => {
     return (
         <GalleryStyleWrapper ref={ref}>
             <GalleryStyle>
+
+            {modalOpen && (
+                            <ModalBackdrop > 
+                                <ModalContent ref={modalContentRef} className="modal-content">
+                                    <CloseButton onClick={closeModal}>&times;</CloseButton>
+                                    <button className="prev" onClick={() => navigateImage(-1)}> 
+                                        <FontAwesomeIcon icon={faChevronLeft} />
+                                    </button>
+                                    <img className="modal-img" src={images[selectedImage]} alt={`Slide ${selectedImage}`}/> 
+                                    <button className="next" onClick={() => navigateImage(1)}>
+                                        <FontAwesomeIcon icon={faChevronRight} />
+                                    </button> 
+                                    <div className="thumbnails">
+                                    {images.map((thumb, index) => (
+                                        <img
+                                            className={`thumb-img ${selectedImage === index ? 'active' : ''}`}
+                                            key={index} 
+                                            src={thumb}
+                                            alt={`thumbnail ${index}`}
+                                            onClick={() => setSelectedImage(index)}
+                                        /> 
+                                    ))}
+                                    </div>
+                                </ModalContent>
+                            </ModalBackdrop>
+                        )}
+                        
                 {/* Conditionally render the <h2> based on showFullGallery */}
                 {showFullGallery && (
                     // If the gallery is open, render <h2> above .gallery-page
@@ -208,31 +235,6 @@ export const Gallery = forwardRef((props, ref) => {
                             </button>
                         </div>
  
-                        {modalOpen && (
-                            <ModalBackdrop > 
-                                <ModalContent ref={modalContentRef} className="modal-content">
-                                    <CloseButton onClick={closeModal}>&times;</CloseButton>
-                                    <button className="prev" onClick={() => navigateImage(-1)}> 
-                                        <FontAwesomeIcon icon={faChevronLeft} />
-                                    </button>
-                                    <img className="modal-img" src={images[selectedImage]} alt={`Slide ${selectedImage}`}/> 
-                                    <button className="next" onClick={() => navigateImage(1)}>
-                                        <FontAwesomeIcon icon={faChevronRight} />
-                                    </button> 
-                                    <div className="thumbnails">
-                                    {images.map((thumb, index) => (
-                                        <img
-                                            className={`thumb-img ${selectedImage === index ? 'active' : ''}`}
-                                            key={index} 
-                                            src={thumb}
-                                            alt={`thumbnail ${index}`}
-                                            onClick={() => setSelectedImage(index)}
-                                        /> 
-                                    ))}
-                                    </div>
-                                </ModalContent>
-                            </ModalBackdrop>
-                        )}
                         
                        
                     </div>
@@ -242,3 +244,11 @@ export const Gallery = forwardRef((props, ref) => {
     )
 }) 
 
+// #1 Nav vil ha meg ut i hvilken som helst jobb, men jeg kan ikke det pga kloen.
+// #2 Jeg har ca 1 dag i uken der jeg har saa vondt i nakken/skuldre/hodet at jeg ikke klarer aa gjoere noe som helst..
+// #3 Jeg vil ha en jobb innen min utdannelse som ogsaa er fleksibel med remote jobb.
+// #4 Vanskelig for aa finne jobb innen front-end, men blir mye mer ettertraktet med backend i tillegg til front end.(fullstack)
+// #5 Fullfoerte front end studiene med gode resultater.
+// #6 Vil soeke til NAV for 2 nye aar med studie for backend.
+// #7 Trenger av deg og oppdatere min helse situasjon saa NAV er klar over situasjonen.
+// #8 
