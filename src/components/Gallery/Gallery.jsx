@@ -201,6 +201,7 @@ export const Gallery = forwardRef((props, ref) => {
                         <img 
                           className={`gallery-front-img ${linkHovered ? 'link-hovered' : ''}`}
                           src={bolig10} 
+                          onClick={handleGalleryLinkClick}
                           alt="Gallery Preview"  
                           />
 

@@ -5,6 +5,7 @@ export const PriserContainer = styled.div`
   flex-direction: column;
   box-shadow: 2px rgba(255, 255, 255);
   margin: auto;
+  min-height: 100%;
 
   .subparagraf {
     font-family: 'Lora', serif;
@@ -59,6 +60,10 @@ export const PriserContainer = styled.div`
       color: #000;
       background: #F0EAD6;
       border: 1px solid #000;
+
+      &:focus {
+        border: 2px solid #000;
+      }
       
       &:hover  {
         box-shadow: 0 1px 3px rgba(100, 80, 65, 0.9);
@@ -168,7 +173,7 @@ export const PriserWrapper = styled.div`
   @media(max-width: 800px) {
     height: 100%;
     min-height: 100%;
-    padding-block: 80px 100px;
+    padding-block: 60px 100px;
   }
 `
 
