@@ -264,16 +264,16 @@ export const ModalContent = styled.div`
   background: rgb(245, 245, 220);
   border: 7px solid silver;
   border-radius: 3px;  
-  
   max-width: 90%;  
   max-height: 90%;
   width: 900px;
   height: auto;
   overflow: hidden;
-  
-  @media(max-width: 700px) {
-    
-  }
+
+  @media(max-width: 600px) {
+      //max-height: 60%;
+
+    }
   
   .prev, .next { 
     position: absolute;     
@@ -310,8 +310,9 @@ export const ModalContent = styled.div`
     min-height: 550px;
     max-height: 550px;
 
-    @media(max-width: 800px) {
-      max-width: 98%;
+    @media(max-width: 600px) {
+      min-height: 420px;
+      max-height: 420px;
     }
   }   
 
@@ -337,6 +338,41 @@ export const ModalContent = styled.div`
     border: 2px solid #0B0C1A;
   }
   }
+
+  @media (orientation: landscape) and (max-width: 1024px) {
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .modal-img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 80vh; /* Ensures the image fits well within the available height */
+        object-fit: contain; /* Keeps the aspect ratio intact */
+        margin: auto;
+    }
+
+    .thumbnails {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .prev, .next {
+        font-size: 40px; /* Adjusted size for landscape mode */
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    }
+}
+
+  
 `;
 
 export const ModalBackdrop = styled.div`
@@ -369,5 +405,3 @@ export const GalleryStyleWrapper = styled.section`
     padding-block: 40px 60px;
   }
 `
-
-
