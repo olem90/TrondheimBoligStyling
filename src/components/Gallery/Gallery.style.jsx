@@ -269,11 +269,6 @@ export const ModalContent = styled.div`
   width: 900px;
   height: auto;
   overflow: hidden;
-
-  @media(max-width: 600px) {
-      //max-height: 60%;
-
-    }
   
   .prev, .next { 
     position: absolute;     
@@ -290,6 +285,16 @@ export const ModalContent = styled.div`
     padding: 20px;
     transition: opacity 0.5s ease;
     outline: 1px solid transparent;
+
+    @media(max-width: 800px) {
+     font-size: 56px;
+     max-width: 50px;
+    }
+
+    @media(max-width: 600px) {
+     font-size: 46px; 
+     max-width: 40px;
+    }
 
     &:hover {
       background: rgba(255, 255, 255, 0.8); 
@@ -338,41 +343,6 @@ export const ModalContent = styled.div`
     border: 2px solid #0B0C1A;
   }
   }
-
-  @media (orientation: landscape) and (max-width: 1024px) {
-    .modal-content {
-        width: 90%;
-        max-width: 100%;
-        height: auto;
-        max-height: 100%;
-        padding: 20px;
-        border-radius: 5px;
-    }
-
-    .modal-img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 80vh; /* Ensures the image fits well within the available height */
-        object-fit: contain; /* Keeps the aspect ratio intact */
-        margin: auto;
-    }
-
-    .thumbnails {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-        gap: 10px;
-        overflow-x: auto;
-    }
-
-    .prev, .next {
-        font-size: 40px; /* Adjusted size for landscape mode */
-        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    }
-}
-
-  
 `;
 
 export const ModalBackdrop = styled.div`

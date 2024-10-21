@@ -87,12 +87,15 @@ export const Gallery = forwardRef((props, ref) => {
                 button.style.opacity = '1';
             });
 
-            clearTimeout(timeoutIdRef.current);
-            timeoutIdRef.current = setTimeout(hideButtons, 2500); // 4 seconds to hide
+            if (window.innerWidth > 1024) {
+                clearTimeout(timeoutIdRef.current);
+                timeoutIdRef.current = setTimeout(hideButtons, 2500);
+            }
         };
 
-        // Initially hide the buttons after 4 seconds
-        timeoutIdRef.current = setTimeout(hideButtons, 2500); 
+        if (window.innerWidth > 1024) {
+            timeoutIdRef.current = setTimeout(hideButtons, 2500);
+        }
 
         // Event listener for mouse movement
         document.addEventListener('mousemove', showButtons);
@@ -244,11 +247,3 @@ export const Gallery = forwardRef((props, ref) => {
         </GalleryStyleWrapper>
     )
 })
-
-// #1 Nav vil ha meg ut i hvilken som helst jobb, men jeg kan ikke det pga kloen.
-// #2 Jeg har ca 1 dag i uken der jeg har saa vondt i nakken/skuldre/hodet at jeg ikke klarer aa gjoere noe som helst..
-// #3 Jeg vil ha en jobb innen min utdannelse som ogsaa er fleksibel med remote jobb.
-// #4 Vanskelig for aa finne jobb innen front-end, men blir mye mer ettertraktet med backend i tillegg til front end.(fullstack).
-// #5 Fullfoerte front end studiene med gode resultater.
-// #6 Vil soeke til NAV for 2 nye aar med studie for backend.
-// #7 Trenger av deg og oppdatere min helse situasjon saa NAV er klar over situasjonen.
