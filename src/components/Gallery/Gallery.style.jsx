@@ -292,8 +292,9 @@ export const ModalContent = styled.div`
     }
 
     @media(max-width: 600px) {
-     font-size: 46px; 
-     max-width: 40px;
+     font-size: 36px; 
+     max-width: 36px;
+     padding: 6px 2px;
     }
 
     &:hover {
