@@ -289,6 +289,7 @@ export const ModalContent = styled.div`
     @media(max-width: 800px) {
      font-size: 56px;
      max-width: 50px;
+     background: rgba(255, 255, 255, 0.25); 
     }
 
     @media(max-width: 600px) {
