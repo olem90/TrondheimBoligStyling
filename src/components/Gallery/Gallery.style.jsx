@@ -242,19 +242,18 @@ export const CloseButton = styled.button`
   right: 15px; 
   cursor: pointer;
   color: #000;
-  font-size: 70px;
+  font-size: 55px;
   padding: 0;
   height: 42px;
   border: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.33);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
   @media(max-width: 800px) {
-    font-size: 46px;
-    background: rgba(255, 255, 255, 0.33);
+    font-size: 40px;
     max-height: 32px;
   }
 `;
@@ -271,34 +270,35 @@ export const ModalContent = styled.div`
   border-radius: 3px;  
   max-width: 90%;  
   max-height: 90%;
-  width: 900px;
+  width: 820px;
   height: auto;
   overflow: hidden;
   
   .prev, .next { 
     position: absolute;     
-    top: 46%; 
+    top: 46%;
     transform: translateY(-50%);
     border: none;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 60px;  
     display: flex;  
     justify-content: center;  
     align-items: center;   
     max-width: 50px; 
-    background: rgba(255, 255, 255, 0.5);   
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.33);
+    padding: 10px;
     transition: opacity 0.5s ease;
     outline: 1px solid transparent;
 
     @media(max-width: 800px) {
-     font-size: 55px;
-     background: rgba(255, 255, 255, 0.33); 
+     font-size: 40px;
+     background: rgba(255, 255, 255, 0.33);
+     max-width: 36px;
     }
 
     @media(max-width: 600px) {
-     font-size: 36px; 
-     max-width: 36px;
+     font-size: 32px;
      padding: 6px 2px;
     }
 
