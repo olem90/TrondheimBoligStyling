@@ -238,13 +238,12 @@ export const ClickableImage = styled.button`
 export const CloseButton = styled.button`
   box-sizing: border-box;
   position: absolute;
-  top: 10px;
-  right: 30px; 
+  top: 15px;
+  right: 15px; 
   cursor: pointer;
   color: #000;
   font-size: 70px;
   padding: 0;
-  margin-top: 20px;
   height: 42px;
   border: none;
   background: rgba(255, 255, 255, 0.5);
@@ -252,6 +251,12 @@ export const CloseButton = styled.button`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media(max-width: 800px) {
+    font-size: 46px;
+    background: rgba(255, 255, 255, 0.33);
+    max-height: 32px;
+  }
 `;
  
 export const ModalContent = styled.div`  
@@ -276,20 +281,19 @@ export const ModalContent = styled.div`
     transform: translateY(-50%);
     border: none;
     cursor: pointer;
-    font-size: 66px;  
+    font-size: 60px;  
     display: flex;  
     justify-content: center;  
     align-items: center;   
-    max-width: 60px; 
+    max-width: 50px; 
     background: rgba(255, 255, 255, 0.5);   
     padding: 20px;
     transition: opacity 0.5s ease;
     outline: 1px solid transparent;
 
     @media(max-width: 800px) {
-     font-size: 56px;
-     max-width: 50px;
-     background: rgba(255, 255, 255, 0.25); 
+     font-size: 55px;
+     background: rgba(255, 255, 255, 0.33); 
     }
 
     @media(max-width: 600px) {
