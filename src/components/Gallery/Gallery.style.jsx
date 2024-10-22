@@ -273,6 +273,10 @@ export const ModalContent = styled.div`
   width: 820px;
   height: auto;
   overflow: hidden;
+
+  @media(max-width: 450px) {
+    max-width: 98%;
+  }
   
   .prev, .next { 
     position: absolute;     
@@ -281,25 +285,23 @@ export const ModalContent = styled.div`
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 60px;  
+    font-size: 40px;  
     display: flex;  
     justify-content: center;  
     align-items: center;   
-    max-width: 50px; 
+    max-width: 36px;
     background: rgba(255, 255, 255, 0.33);
     padding: 10px;
     transition: opacity 0.5s ease;
     outline: 1px solid transparent;
 
-    @media(max-width: 800px) {
-     font-size: 40px;
-     background: rgba(255, 255, 255, 0.33);
-     max-width: 36px;
-    }
-
     @media(max-width: 600px) {
      font-size: 32px;
      padding: 6px 2px;
+    }
+
+    @media(max-width: 450px) {
+      font-size: 25px;
     }
 
     &:hover {
@@ -325,24 +327,52 @@ export const ModalContent = styled.div`
       min-height: 420px;
       max-height: 420px;
     }
+
+    @media(max-width: 450px) {
+      min-height: 340px;
+      max-height: 340px;
+    }
   }   
 
   .thumbnails {  
     display: flex;
-    margin-top: 5px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap; 
     scrollbar-width: thin;
     scrollbar-color: #888 #e0e0e0;
     gap: 10px;
-    min-height: 94px;
+    align-items: center;
+    min-height: 92px;
  
   .thumb-img {
     max-width: 100px;
     min-width: 100px;
     max-height: 80px;
     min-height: 80px;
+
+    @media(max-width: 600px) {
+      max-width: 90px;
+      min-width: 90px;
+      max-height: 70px;
+      min-height: 70px;
+    }
+
+    @media(max-width: 450px) {
+      max-width: 70px;
+      min-width: 70px;
+      max-height: 70px;
+      min-height: 70px;
+    }
+
+    @media(max-width: 350px) {
+      max-width: 60px;
+      min-width: 60px;
+      max-height: 60px;
+      min-height: 60px;
+    }
+
+
   }
 
   .thumb-img.active {
