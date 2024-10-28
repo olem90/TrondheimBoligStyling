@@ -41,9 +41,10 @@ export const Nav = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollT
                 <span></span>
             </HamburgerButton>
             <div ref={navRef} className={`navLinks ${menuOpen ? 'open' : ''}`}>
-                <NavLink onClick={() => { scrollToPriser(); closeMenu(); }} className="priser-link">Priser</NavLink>
+                <button className="closeButton" onClick={toggleMenu}>✕</button>
                 <NavLink onClick={() => {scrollToGallery(); closeMenu();}} className="gallery-link">Galleri</NavLink>
                 <NavLink onClick={() => {scrollToAboutUs(); closeMenu();}} className="om-oss-link">Om Oss</NavLink>
+                <NavLink onClick={() => { scrollToPriser(); closeMenu(); }} className="priser-link">Priser</NavLink>
                 <NavLink onClick={() => { scrollToContact(); closeMenu(); }} className="kontakt-oss-link">Kontakt Oss</NavLink>
             </div>
         </NavStyle>

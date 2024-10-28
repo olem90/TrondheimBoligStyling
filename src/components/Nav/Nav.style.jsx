@@ -1,129 +1,3 @@
-
-/*
-export const NavStyle = styled.nav`
-  box-sizing: border-box;
-  color: #fff;
-  display: flex;
-  min-width: 100%;
-  margin-inline: auto;   
-  height: 110px; 
-  background: #000; 
-
-  a {
-    color: #C0A16B;  
-    font-size: 20px;
-    font-family: 'Lora', serif;
-    transition: .3s ease;
-    
-    &:hover {
-      color: #D4AF37; 
-    }
-  }  
-
-  .navLinks {
-    display: flex;
-    margin-left: auto;
-    margin-block: auto;
-  }  
-
-  .priser-link {
-    margin-right: 65px; 
-  }
-
-  .om-oss-link {
-   margin-right: 65px; 
-  }
-
-  .kontakt-oss-link {
-    margin-right: 145px; 
-  }
-
-  .gallery-link {  
-    margin-right: 65px;
-  }
-
-  @media(max-width: 1000px) {
-
-    a {
-      font-size: 18px;
-    }
-
-    .priser-link {
-      margin-right: 45px; 
-    }
-
-    .om-oss-link {
-      margin-right: 45px; 
-    }
-
-    .kontakt-oss-link {
-      margin-right: 80px;    
-    }
-
-    .gallery-link {  
-      margin-right: 45px;   
-    }
-  }
-
-  @media(max-width: 800px) {
-
-    .priser-link {
-      margin-right: 35px; 
-    }
-
-    .om-oss-link {
-      margin-right: 35px; 
-    }
-
-    .kontakt-oss-link {
-      margin-right: 40px;  
-    }
-
-    .gallery-link {  
-      margin-right: 35px;   
-    }
-  }
-
-  @media(max-width: 700px) {
-
-    .priser-link {
-      margin-right: 25px; 
-    }
-
-    .om-oss-link {
-      margin-right: 25px; 
-    }
-
-    .kontakt-oss-link {
-      margin-right: 25px;  
-    }
-
-    .gallery-link {  
-      margin-right: 25px;   
-    }
-  }
-` 
-
-export const LogoStyle = styled.div`
-  width: 200px;
-  margin-left: 30px;   
-  max-height: 110px;   
-  display: flex; 
-  align-items: center;
-
-  .logo {
-    width: 100%;  
-    max-height: 100%;  
-    object-fit: cover; 
-  }
-
-  @media(max-width: 800px) {
-    width: 170px;
-  }
-`
-*/
-
-
 import styled from "styled-components";
 
 export const NavStyle = styled.nav`
@@ -154,19 +28,41 @@ export const NavStyle = styled.nav`
       }
     }
 
+    .closeButton {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #C0A16B;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+        
+        &:hover {
+          color: #D4AF37;
+        }
+      }
+
     &.open {
       display: flex;
       flex-direction: column;
-      position: absolute;
+      position: fixed;
       justify-content: center;
       align-items: center;
-      top: 0px;
+      top: 0;
       left: 0;
       width: 100%;
+      min-height: 100vh; 
       min-height: 100svh; 
       background: rgba(0, 0, 0, 0.9);
       max-height: 500px;
       z-index: 99;
+
+      .closeButton {
+        display: block;
+      }
 
       a {
         font-weight: bold;
@@ -231,6 +127,19 @@ export const HamburgerButton = styled.button`
     z-index: 100;
   }
 
+  &.open {
+    span, span::before, span::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #C0A16B;  
+    position: fixed;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 100;
+  }
+  }
+
   span::before {
     transform: translateY(-8px);
   }
@@ -241,10 +150,10 @@ export const HamburgerButton = styled.button`
 
   &.open span {
     transform: rotate(45deg);
+    display: none;
 
     &::before {
-      transform: rotate(-90deg);
-      
+      display: none;
     }
 
     &::after {

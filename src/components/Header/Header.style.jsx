@@ -24,6 +24,4 @@ export const HeaderStyle = styled.header`
     background-position: center;
     z-index: -1;
   }
-
-  
 `
