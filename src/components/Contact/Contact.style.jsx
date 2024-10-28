@@ -10,7 +10,7 @@ export const ContactStyle = styled.div`
   h1 {
     text-align: center;
     color: #E0F7FA;
-    font-family: 'Dancing Script', serif;
+    font-family: 'Dancing Script', 'roboto', serif;
     font-size: 64px;
     font-weight: bold; 
   }
@@ -41,15 +41,19 @@ export const ContactStyle = styled.div`
         white-space: nowrap;  
         color: #E0F7FA;
         text-decoration: none;
+
+        @media(max-width: 800px) {
+          font-size: 20px;
+        }
+
+        @media(max-width: 600px) {
+          font-size: 18px;
+        }
  
         &:hover {
           color: #fff;
-          cursor: pointer; 
-        }
-
-      @media(max-width: 320px) {
-        font-size: 20px;
-    }
+          cursor: pointer;
+      }
 
       }
 
@@ -82,7 +86,7 @@ export const ContactFormStyle = styled.form`
   flex-direction: column;
   padding: 20px;
   margin: auto;
-  background: #F0EDE5;
+  background: #F7F5EB;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(143, 124, 107, 0.1);
   
@@ -108,13 +112,19 @@ export const ContactFormStyle = styled.form`
   } 
  
   input {
-    padding: 10px;
+    padding: 12px 5px;
     background: #fff; 
     border-radius: 3px; 
     height: 20px;
     border: 1px solid #B0A295;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     color: #333333;
+
+    @media(max-width: 800px) {
+      font-size: 15px;
+      padding: 11px 5px;
+    }
   }
 
   input:focus,
@@ -127,12 +137,16 @@ export const ContactFormStyle = styled.form`
 
   label {
     margin-block: 5px;
-    color: #333333; 
+    color: #333333;
+    font-size: 18px;
+    
   }
 
   span {
     color: #dc3545;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
   }
 
   textarea {

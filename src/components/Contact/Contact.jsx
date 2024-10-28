@@ -255,7 +255,7 @@ export const Contact = forwardRef((props, ref) => {
     const validateInput = (name, value) => {
         switch (name) {
             case 'name':
-                return value.length >= 3 ? '' : "* navn må være minst 2 bokstaver langt";
+                return value.length >= 3 ? '' : "* navn må være minst 3 bokstaver langt";
             case 'subject':
                 return value.length >= 3 ? '' : "* Subjekt må være minst 3 bokstaver langt";
             case 'email':

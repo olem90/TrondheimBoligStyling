@@ -69,6 +69,13 @@ export const GalleryStyle = styled.div`
           background: #000;
           color: #fff;
           border-radius: 5px;
+          font-size: 15px;
+          font-family:  'Lora' ,'roboto', 'serif';
+          
+            @media(max-width: 700px) {
+              font-size: 14px;
+              padding: 4px 6px;
+            }
         }
            
         .lukk-galleri {    
@@ -79,6 +86,7 @@ export const GalleryStyle = styled.div`
           width: 100px;   
           padding: 1px; 
           color: #000;
+          font-family:  'Lora' ,'roboto', 'serif';
           text-decoration: underline;
           margin-left: 0;
           padding-left: 0;
@@ -255,6 +263,11 @@ export const CloseButton = styled.button`
   @media(max-width: 800px) {
     font-size: 40px;
     max-height: 32px;
+  }
+
+  @media(max-width: 600px) {
+    font-size: 30px;
+    max-height: 22px;
   }
 `;
  
