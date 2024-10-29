@@ -416,7 +416,7 @@ export const GalleryStyleWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F0E1D1;
+  background: #e3ddcd;
 
   @media(max-width: 800px) {
     height: 100%;
