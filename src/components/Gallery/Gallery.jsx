@@ -13,7 +13,12 @@ import bolig7 from "../../images/bolig-7.jpg";
 import bolig8 from "../../images/bolig-8.jpg";
 import bolig9 from "../../images/bolig-9.jpg";  
 import bolig10 from "../../images/bolig-10.jpg";
-import bolig11 from "../../images/bolig-11.jpg";  
+import bolig11 from "../../images/bolig-11.jpg";
+import bolig12 from "../../images/bolig-12.jpg";
+import bolig13 from "../../images/bolig-13.jpg";
+import bolig14 from "../../images/bolig-14.jpg";
+import bolig15 from "../../images/bolig-15.jpg";
+import bolig16 from "../../images/bolig-16.jpg";
 
 export const Gallery = forwardRef((props, ref) => {
     const [showFullGallery, setShowFullGallery] = useState(false);
@@ -23,7 +28,7 @@ export const Gallery = forwardRef((props, ref) => {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-    const images = [bolig1, bolig2, bolig3, bolig4, bolig5, bolig6, bolig7, bolig8, bolig9, bolig10, bolig11]; 
+    const images = [bolig1, bolig2, bolig3, bolig4, bolig5, bolig6, bolig7, bolig8, bolig9, bolig10, bolig11, bolig12, bolig13, bolig14, bolig15, bolig16]; 
 
     const indexOfLastImage = currentPage * imagesPerPage;
     const indexOfFirstImage = indexOfLastImage - imagesPerPage;
