@@ -117,6 +117,7 @@ export const GalleryStyle = styled.div`
         min-height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        align-content: start;
         
         img {
           max-height: 190px;

@@ -242,10 +242,7 @@ export const Gallery = forwardRef((props, ref) => {
                             <button onClick={nextPage} disabled={currentPage * imagesPerPage >= images.length}> 
                                 Next
                             </button>
-                        </div>
- 
-                        
-                       
+                        </div> 
                     </div>
                 </div>
             </GalleryStyle>
