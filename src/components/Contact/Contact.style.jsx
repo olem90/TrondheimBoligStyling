@@ -87,6 +87,7 @@ export const ContactFormStyle = styled.form`
   padding: 20px;
   margin: auto;
   background: #F7F5EB;
+  background:#FAFAFA;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(143, 124, 107, 0.1);
   

@@ -19,7 +19,7 @@ export const NavStyle = styled.nav`
     a {
       color: #C0A16B;  
       font-size: 20px;
-      font-family: 'Lora', serif;
+      font-family: 'Lora','roboto', serif;
       transition: .3s ease;
       text-decoration: none;
 
