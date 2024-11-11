@@ -315,7 +315,7 @@ export const Contact = forwardRef((props, ref) => {
                 formData.append('email', email);
                 formData.append('message', body);
 
-                const response = await fetch('http://localhost/trondheimboligstyling/server/send_email.php', {
+                const response = await fetch('http://localhost/trondheimboligstyling/send_email.php', {
                     method: 'POST',
                     body: formData,
                 });
