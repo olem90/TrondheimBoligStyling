@@ -133,7 +133,6 @@ export const GalleryStyle = styled.div`
           
           @media(max-width: 900px) {
             min-height: 180px;
-            aspect-ratio: 16 / 12;
           }
 
           @media(max-width: 500px) {
