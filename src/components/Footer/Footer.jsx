@@ -10,7 +10,7 @@ export const Footer = () => {
                 <div>
                     <h2>Kontakt oss:</h2>
                     <p>
-                        <a>
+                        <a href="tel:+4793271886">
                           <FontAwesomeIcon icon={faPhone} /> 93271886
                         </a>
                     </p>

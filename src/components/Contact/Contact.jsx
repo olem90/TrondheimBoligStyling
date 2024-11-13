@@ -370,6 +370,7 @@ export const Contact = forwardRef((props, ref) => {
                         placeholder="Subjekt.."
                         onChange={handleInputChange}
                         onBlur={handleBlur}
+                        required
                         className={touched.subject && errors.subject === '' ? 'valid' : touched.subject ? 'invalid' : ''}
                     />
                     <span>{touched.subject && errors.subject}</span>
@@ -409,7 +410,7 @@ export const Contact = forwardRef((props, ref) => {
                     <div className="contact-links">
                       <div>
                         <p>
-                          <a>
+                          <a href="tel:+4793271886">
                             <FontAwesomeIcon className="phone-icon" icon={faPhone} /> 93271886
                           </a>
                         </p>
