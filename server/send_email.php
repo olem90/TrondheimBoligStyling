@@ -3,16 +3,16 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'server/PHPMailer/src/PHPMailer.php';
-require 'server/PHPMailer/src/Exception.php';
-require 'server/PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/SMTP.php';
 require 'config.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin:  https://trondheimboligstyling.no");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Recipients
         $mail->setFrom(EMAIL_USER, 'Trondheim Bolig Styling');
-        $mail->addAddress('trondheimboligstyling@gmail.com');
+        $mail->addAddress('kontakt@trondheimboligstyling.no');
         $mail->addReplyTo($email, $name);
 
         // Content
