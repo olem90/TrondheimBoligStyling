@@ -99,7 +99,7 @@ export const ContactFormStyle = styled.form`
     font-weight: bold;
     font-size: 25px;
     border: 2px solid transparent;
-    font-family: 'Dancing Script', serif;
+    font-family: 'Dancing Script','roboto', serif;
     padding: 5px;
     border: 2px solid #8F7C6B;
     box-shadow: 0 4px 6px rgba(110, 75, 58, 0.3), /* Darker shadow */
@@ -148,6 +148,15 @@ export const ContactFormStyle = styled.form`
     font-size: 13px;
     font-weight: bold;
     margin-top: 5px;
+  }
+
+  .success-message {
+    color: green;
+    font-weight: bold;
+  }
+  .error-message {
+    color: #dc3545;
+    font-weight: bold;
   }
 
   textarea {

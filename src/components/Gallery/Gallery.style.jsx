@@ -15,7 +15,8 @@ export const GalleryStyle = styled.div`
     text-align: center;  
     font-size: 54px;
     color: #000;
-    font-family: 'Cormorant Garamond', serif; 
+    font-family: 'Cormorant Garamond', serif;
+    //font-family: 'Dancing Script','roboto', serif;
     font-weight: bold; 
     margin: 0 0 30px 0; 
   }
@@ -219,6 +220,7 @@ export const GalleryStyle = styled.div`
     font-family: Lora, PlayfairDisplay, sans serif;
     transition: border 0.3s ease; 
     white-space: nowrap; 
+    //font-family: 'Dancing Script','roboto', serif;
 
     &:hover { 
       cursor: pointer;
