@@ -60,7 +60,7 @@ export const GalleryStyle = styled.div`
       .pagination-buttons {
         box-sizing: border-box;
         display: flex;
-        margin-top: 15px;
+        margin: 0;
         min-width: 100%;
         
         button {
