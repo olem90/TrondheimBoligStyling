@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 import { NavStyle, LogoStyle, HamburgerButton } from "./Nav.style";
-import logo from "../../images/tbs-logo.png"
+import logo from "../../images/tbs-logo.png";
 
 export const Nav = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollToPriser }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ export const Nav = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollT
     return (
         <NavStyle>
             <LogoStyle>
-                <img className="logo" src={logo} alt="Trondheim Boligstyling-logo med en stilisert gull 'T' inni en sirkulær ramme, med firmanavnet 'Trondheim Boligstyling' skrevet under i elegante, gullfargede store bokstaver."></img> 
+                <img className="logo" src={logo} alt="Trondheim Boligstyling logo med en stilisert gull 'T' inni en sirkulær ramme, med firmanavnet 'Trondheim Boligstyling' skrevet under i elegante, gullfargede store bokstaver."></img> 
             </LogoStyle>
             <HamburgerButton ref={hamburgerRef} onClick={toggleMenu} className={menuOpen ? 'open' : ''}>
                 <span></span>
