@@ -8,7 +8,7 @@ import { Helstyling } from "./HelStyling";
 
 export const Priser = forwardRef((props, ref) => {
 
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState('veiledning');
 
   const handleButtonClick = (section) => {
     setActiveSection(section);
@@ -16,14 +16,18 @@ export const Priser = forwardRef((props, ref) => {
 
     return (
         <PriserWrapper ref={ref}>
+          <h2>Priser</h2>
             <PriserContainer>
-                <h2>Priser</h2>
+                
                 <div className="buttons-container">
                   <div>
-                    <button onClick={() => handleButtonClick('veiledning')}>Interiørveiledning</button>
-                    <button onClick={() => handleButtonClick('ministyling')}>Ministyling</button>    
-                    <button onClick={() => handleButtonClick('delstyling')}>Delstyling</button>
-                    <button className="helstyling-btn" onClick={() => handleButtonClick('helstyling')}>Helstyling</button>
+                    <button className={activeSection === 'veiledning' ? 'active': ''} 
+                            onClick={() => handleButtonClick('veiledning')}>Interiørveiledning
+                    </button>
+                    <button className={activeSection === 'ministyling' ? 'active' : ''} 
+                            onClick={() => handleButtonClick('ministyling')}>Ministyling</button>    
+                    <button className={activeSection === 'delstyling' ? 'active' : ''} onClick={() => handleButtonClick('delstyling')}>Delstyling</button>
+                    <button className={activeSection === 'helstyling' ? 'active' : ''} onClick={() => handleButtonClick('helstyling')}>Helstyling</button>
                   </div>   
                 </div>
                 {activeSection && (
