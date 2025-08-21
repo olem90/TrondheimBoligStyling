@@ -31,7 +31,6 @@ export const Nav = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollT
         };
     }, []);
 
-
     return (
         <NavStyle>
             <LogoStyle>
