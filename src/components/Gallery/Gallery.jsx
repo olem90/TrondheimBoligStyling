@@ -3,38 +3,53 @@ import { GalleryStyle, GalleryStyleWrapper, ClickableImage, ModalBackdrop, Modal
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import bolig1 from "../../images/bolig-1.jpg";
-import bolig2 from "../../images/bolig-2.jpg";
-import bolig3 from "../../images/bolig-3.jpg";
-import bolig4 from "../../images/bolig-4.jpg";
-import bolig5 from "../../images/bolig-5.jpg";
-import bolig6 from "../../images/bolig-6.jpg"; 
-import bolig7 from "../../images/bolig-7.jpg";
-import bolig8 from "../../images/bolig-8.jpg";
-import bolig9 from "../../images/bolig-9.jpg";  
+// import bolig1 from "../../images/bolig-1.jpg";
+// import bolig2 from "../../images/bolig-2.jpg";
+// import bolig3 from "../../images/bolig-3.jpg";
+// import bolig4 from "../../images/bolig-4.jpg";
+// import bolig5 from "../../images/bolig-5.jpg";
+// import bolig6 from "../../images/bolig-6.jpg"; 
+// import bolig7 from "../../images/bolig-7.jpg";
+// import bolig8 from "../../images/bolig-8.jpg";
+// import bolig9 from "../../images/bolig-9.jpg";  
 import bolig10 from "../../images/bolig-10.jpg";
-import bolig11 from "../../images/bolig-11.jpg";
-import bolig12 from "../../images/bolig-12.jpg";
-import bolig13 from "../../images/bolig-13.jpg";
-import bolig14 from "../../images/bolig-14.jpg";
-import bolig15 from "../../images/bolig-15.jpg";
-import bolig16 from "../../images/bolig-16.jpg";
+// import bolig11 from "../../images/bolig-11.jpg";
+// import bolig12 from "../../images/bolig-12.jpg";
+// import bolig13 from "../../images/bolig-13.jpg";
+// import bolig14 from "../../images/bolig-14.jpg";
+// import bolig15 from "../../images/bolig-15.jpg";
+// import bolig16 from "../../images/bolig-16.jpg";
 
 export const Gallery = forwardRef((props, ref) => {
     const [showFullGallery, setShowFullGallery] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [imagesPerPage, setImagesPerPage] = useState(9);
+    const [images, setImages] = useState([]);
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-    const images = [bolig1, bolig2, bolig3, bolig4, bolig5, bolig6, bolig7, bolig8, bolig9, bolig10, bolig11, bolig12, bolig13, bolig14, bolig15, bolig16]; 
+    //const images = [bolig1, bolig2, bolig3, bolig4, bolig5, bolig6, bolig7, bolig8, bolig9, bolig10, bolig11, bolig12, bolig13, bolig14, bolig15, bolig16]; 
 
     const indexOfLastImage = currentPage * imagesPerPage;
     const indexOfFirstImage = indexOfLastImage - imagesPerPage;
     const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
     const modalContentRef = useRef(null); 
     const timeoutIdRef = useRef(null);
+
+    useEffect ( () => {
+        const loadImages = async () => {
+            try {
+                const res = await fetch('/list-images.php');
+                const data = await res.json();
+                setImages(data);
+            }
+            catch (err) {
+                console.error("failed to load images");
+            }
+        }
+        loadImages();
+    }, []);
 
     const openModalWithImage = (index) => {
         setSelectedImage(index); 
