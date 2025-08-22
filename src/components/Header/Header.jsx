@@ -8,9 +8,10 @@ import bolig9 from "../../images/bolig-9.jpg";
 
 export const Header = ({ scrollToAboutUs, scrollToContact, scrollToGallery, scrollToPriser}) => {
     const images = [
-        {src: bolig7, alt: "Vakkert designet stue med moderne møbler."}, 
-        {src: bolig8, alt: "Romslig kjøkkenområde med stilige innredninger."}, 
-        {src: bolig9, alt:"Elegant soverom med en beroligende atmosfære."}];
+    { src: bolig7, alt: "Vakkert designet stue med moderne møbler." },
+    { src: bolig8, alt: "Romslig kjøkkenområde med stilige innredninger." },
+    { src: bolig9, alt: "Elegant soverom med en beroligende atmosfære." },
+];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

@@ -243,6 +243,7 @@ export const Gallery = forwardRef((props, ref) => {
                             {currentImages.map((image, index) => (
                                 <ClickableImage 
                                     key={index} 
+                                    loading="lazy"
                                     onClick={() => openModalWithImage(index + indexOfFirstImage)}> 
                                     <img src={image} alt={`Gallery Preview ${index + 1}`}></img>  
                                 </ClickableImage>  
